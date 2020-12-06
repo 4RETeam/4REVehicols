@@ -5,8 +5,6 @@ export type UserDocument = User & Document
 
 @Schema()
 export class User {
-    @Prop()
-    id: number;
 
     @Prop()
     firstName: string;
@@ -27,7 +25,7 @@ export class User {
     phone: string;
 
     @Prop()
-    adress: string;
+    address: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User)

@@ -63,7 +63,7 @@
     "@nrwl/tao": "10.4.4",
     "@nrwl/workspace": "10.4.4",
     "@types/jest": "26.0.8",
-    "@types/mongoose": "^5.10.2",
+    "@types/mongoose": "^510.2",
     "@types/node": "~8.9.4",
     "codelyzer": "~5.0.1",
     "cypress": "^5.5.0",
