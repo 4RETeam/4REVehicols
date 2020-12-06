@@ -1,0 +1,118 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+q {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url('./../../../assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url('./../../../assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+.nav-bar-full {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: space-around;
+
+  .logo {
+    h1 {
+      font-family: "Roboto-Bold", sans-serif;
+    }
+  }
+
+  .center {
+    .nav-list {
+      display: flex;
+      list-style-type: none;
+
+      .nav-list-item {
+        margin: 1em 2em;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: black;
+        font-family: 'Roboto-Regular', sans-serif;
+      }
+
+      .active {
+        position: relative;
+        font-family: 'Roboto-Regular', sans-serif;
+        font-weight: 600;
+        &::after {
+          bottom: -0.5em;
+          left: 0.5em;
+          min-width: 50px;
+          min-height: 5px;
+          position: absolute;
+          content: ' ';
+          background-color: #00ff00;
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    text-align: center;
+    .user-control {
+      position: relative;
+      margin: 1em 2em;
+      padding-top: 0.5em;
+      font-family: 'Roboto', sans-serif;
+      button {
+        font-family: 'Roboto', sans-serif;
+      }
+    }
+
+    .lang-menu {
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      margin: 1em 2em;
+      padding-top: 0.5em;
+      button {
+        font-family: 'Roboto', sans-serif;
+      }
+    }
+  }
+}
