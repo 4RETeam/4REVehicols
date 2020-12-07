@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {FooterComponent} from "./components/footer/footer.component";
+import {HomeComponent} from "./components/home/home.component";
 
 const routes: Routes = [
-  {path: 'fuck', component: FooterComponent}
+  {path: '', component: HomeComponent}
 ];
 
 @NgModule({

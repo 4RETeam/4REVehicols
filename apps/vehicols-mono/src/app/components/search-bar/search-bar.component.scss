@@ -1,0 +1,19 @@
+@import "./../../../styles";
+
+.search-bar {
+  position: relative;
+  background-color: $non-white;
+  height: 107px;
+  max-width: 1550px;
+  margin: 116px auto;
+  .active {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -25px;
+    left: 25px;
+    background: #262D31;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+  }
+}
