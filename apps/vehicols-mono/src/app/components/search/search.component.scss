@@ -1,0 +1,39 @@
+@import "./../../../styles";
+.search-wrap {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .words {
+    text-align: center;
+    .new {
+      margin: 52px 120px 0 0;
+      flex: 1;
+      display: inline-block;
+      font-weight: 700;
+    }
+    .active {
+      position: relative;
+      &::after {
+        bottom: -0.5em;
+        left: 0.1em;
+        min-width: 50px;
+        min-height: 3px;
+        position: absolute;
+        content: ' ';
+        background-color: $client-green;
+      }
+    }
+    .used {
+      flex: 1;
+      margin: 52px 0 0 120px;
+      display: inline-block;
+      font-weight: 500;
+    }
+  }
+  *{
+    flex: 0 0 100%;
+  }
+
+}
