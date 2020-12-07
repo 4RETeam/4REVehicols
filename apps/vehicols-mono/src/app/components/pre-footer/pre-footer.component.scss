@@ -1,0 +1,30 @@
+.pre-footer {
+  height: 294px;
+  background-color: #E7E6E9;
+  display: flex;
+  justify-content: space-evenly;
+  .column {
+    margin-top: 58px;
+    .info-header {
+      position: relative;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      &:after {
+        display: inline-block;
+        background-color: lime;
+        content: '';
+        position: absolute;
+        width: 52px;
+        height: 2px;
+        bottom: -7px;
+        left: 7px;
+        color: lime;
+      }
+    }
+    p {
+      margin-top: 13px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+    }
+  }
+}

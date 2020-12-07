@@ -1,117 +1,166 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote {
-  &:before, &:after {
-    content: '';
-    content: none; } }
-
-q {
-  &:before, &:after {
-    content: '';
-    content: none; } }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-@font-face {
-  font-family: Roboto-Bold;
-  src: url('./../../../assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: Roboto-Regular;
-  src: url('./../../../assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
-}
+$standard-space: 1em;
+$non-white: #f3f3f3;
+$client-green: #00ff00;
+$text-black: #000000;
 
 .nav-bar-full {
-  background-color: #f3f3f3;
+  position: relative;
+  height: 101px;
+  padding: $standard-space 0;
+  background-color: $non-white;
   display: flex;
   justify-content: space-around;
 
   .logo {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     h1 {
+      font-size: 48px;
+      font-weight: 700;
       font-family: "Roboto-Bold", sans-serif;
     }
   }
 
   .center {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     .nav-list {
       display: flex;
       list-style-type: none;
+      justify-content: space-around;
+      flex-direction: row;
 
       .nav-list-item {
-        margin: 1em 2em;
-      }
+        margin: 0 $standard-space*2;
 
-      .nav-link {
-        text-decoration: none;
-        color: black;
-        font-family: 'Roboto-Regular', sans-serif;
+        .nav-link {
+          font-weight: 400;
+          font-size: 18px;
+          text-decoration: none;
+          color: $text-black;
+          font-family: 'Roboto-Regular', sans-serif;
+        }
+
+        .current {
+          font-family: 'Roboto-Regular', sans-serif;
+          font-weight: 600;
+        }
       }
 
       .active {
         position: relative;
         font-family: 'Roboto-Regular', sans-serif;
-        font-weight: 600;
+        font-weight: 500;
+
         &::after {
           bottom: -0.5em;
           left: 0.5em;
           min-width: 50px;
-          min-height: 5px;
+          min-height: 3px;
           position: absolute;
           content: ' ';
-          background-color: #00ff00;
+          background-color: $client-green;
         }
       }
     }
   }
 
   .right {
+    height: 90%;
     display: flex;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+
     .user-control {
       position: relative;
-      margin: 1em 2em;
-      padding-top: 0.5em;
       font-family: 'Roboto', sans-serif;
-      button {
+      margin: 0 $standard-space*3;
+
+      .nav-btn {
         font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        border: none;
+        min-width: $standard-space*4;
+        background-color: $non-white;
+
+        &:focus {
+          outline: none !important;
+          border: none !important;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
     .lang-menu {
       font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
       position: relative;
-      margin: 1em 2em;
-      padding-top: 0.5em;
-      button {
-        font-family: 'Roboto', sans-serif;
+
+      .dropdown {
+        padding-top: 3px;
+        position: relative;
+        display: inline-block;
+
+        .drop-btn {
+          background-color: $non-white;
+          color: $text-black;
+          border: none;
+          min-width: $standard-space*2;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+
+          &:focus {
+            outline: none !important;
+            border: none !important;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: $non-white;
+          min-width: $standard-space*2;
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          z-index: 1;
+
+          a {
+            color: $text-black;
+            text-decoration: none;
+            display: block;
+
+            &:hover {
+              background-color: #ddd;
+            }
+          }
+        }
+
+        &:hover {
+          .dropdown-content {
+            display: block;
+          }
+
+          .drop-btn {
+            cursor: pointer;
+            background-color: $client-green;
+          }
+        }
       }
     }
   }
