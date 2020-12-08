@@ -11,14 +11,15 @@
             position: relative;
             font-weight: 700;
             font-size: 24px;
+            margin-bottom: 1rem;
             &:after {
                 display: inline-block;
                 background-color: $client-green;
                 content: '';
                 position: absolute;
                 width: 52px;
-                height: 2px;
-                bottom: -7px;
+                height: 3px;
+                bottom: -9px;
                 left: 7px;
                 color: $client-green;
             }
@@ -55,11 +56,12 @@
             margin-right: 0.5rem;
         }
         .readmore {
-            border-bottom: 0px solid #ffffff00;
+            background-color: #ffffff00;
             transition: .5s all ease;
             &:hover {
-                border-bottom: 4px solid #17E2B1;
+                color: #440fd3;
                 transition: .3s all ease;
+                font-weight: 500;
             }
         }
     }
