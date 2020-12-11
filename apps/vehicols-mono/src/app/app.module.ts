@@ -14,9 +14,14 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { HomeComponent } from './components/home/home.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { SellComponent } from './components/sell/sell.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { ProductComponent } from './components/product/product.component';
+import { BuyComponent } from './components/buy/buy.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, SearchComponent, UserComponent, DetailedSearchComponent, FooterComponent, PreFooterComponent, SearchBarComponent, SearchFormComponent, HomeComponent],
+  declarations: [AppComponent, NavbarComponent, SearchComponent, UserComponent, DetailedSearchComponent, FooterComponent, PreFooterComponent, SearchBarComponent, SearchFormComponent, HomeComponent, SellComponent, AboutUsComponent, WishlistComponent, ProductComponent, BuyComponent],
     imports: [BrowserModule, HttpClientModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
