@@ -1,0 +1,148 @@
+@import "./../../../styles";
+.nav-bar-full {
+    position: relative;
+    height: 101px;
+    padding: $standard-space 0;
+    background-color: $non-white;
+    display: flex;
+    justify-content: space-around;
+    .logo {
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            font-family: "Roboto-Bold", sans-serif;
+        }
+    }
+    .center {
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .nav-list {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+            flex-direction: row;
+            .nav-list-item {
+                margin: 0 $standard-space*2;
+                .nav-link {
+                    font-weight: 400;
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: $text-black;
+                    font-family: 'Roboto-Regular', sans-serif;
+                }
+                .current {
+                    font-family: 'Roboto-Regular', sans-serif;
+                    font-weight: 600;
+                }
+            }
+            .active {
+                position: relative;
+                font-family: 'Roboto-Regular', sans-serif;
+                font-weight: 500;
+                &::after {
+                    bottom: -0.5em;
+                    left: 0.5em;
+                    min-width: 50px;
+                    min-height: 3px;
+                    position: absolute;
+                    content: ' ';
+                    background-color: $client-green;
+                }
+            }
+        }
+    }
+    .right {
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .user-control {
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+            margin: 0 $standard-space*3;
+            .icon {
+                width: 24px;
+                height: 24px;
+                position: relative;
+                top: 5px;
+            }
+            .nav-btn {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                border: none;
+                text-align: left;
+                background-color: $non-white;
+                border-bottom: 3px solid #00000000;
+                transition: .5s all ease;
+                &:focus {
+                    outline: none !important;
+                    border: none !important;
+                }
+                &:hover {
+                    cursor: pointer;
+                    border-bottom: 3px solid $client-green;
+                    transition: .3s all ease;
+                }
+            }
+        }
+        .lang-menu {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            position: relative;
+            .dropdown {
+                padding-top: 3px;
+                position: relative;
+                display: inline-block;
+                .drop-btn {
+                    background-color: $non-white;
+                    color: $text-black;
+                    border: none;
+                    min-width: $standard-space*2;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 18px;
+                    &:focus {
+                        outline: none !important;
+                        border: none !important;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: $non-white;
+                    min-width: $standard-space*2;
+                    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    a {
+                        color: $text-black;
+                        text-decoration: none;
+                        display: block;
+                        &:hover {
+                            background-color: #ddd;
+                        }
+                    }
+                }
+                &:hover {
+                    .dropdown-content {
+                        display: block;
+                    }
+                    .drop-btn {
+                        cursor: pointer;
+                        background-color: $client-green;
+                    }
+                }
+            }
+        }
+    }
+}

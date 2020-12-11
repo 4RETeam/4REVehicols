@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  numbers: number[];
   constructor() { }
 
   ngOnInit(): void {
+    this.numbers = Array(5).fill(1);
   }
 
 }

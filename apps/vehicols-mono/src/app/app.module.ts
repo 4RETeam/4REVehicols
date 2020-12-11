@@ -10,10 +10,14 @@ import { UserComponent } from './components/user/user.component';
 import { DetailedSearchComponent } from './components/detailed-search/detailed-search.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PreFooterComponent } from './components/pre-footer/pre-footer.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { SearchFormComponent } from './components/search-form/search-form.component';
+import { HomeComponent } from './components/home/home.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, SearchComponent, UserComponent, DetailedSearchComponent, FooterComponent, PreFooterComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  declarations: [AppComponent, NavbarComponent, SearchComponent, UserComponent, DetailedSearchComponent, FooterComponent, PreFooterComponent, SearchBarComponent, SearchFormComponent, HomeComponent],
+    imports: [BrowserModule, HttpClientModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 
