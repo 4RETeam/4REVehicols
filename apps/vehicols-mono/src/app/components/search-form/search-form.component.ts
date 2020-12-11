@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'vehicols-search-form',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-form.component.scss']
 })
 export class SearchFormComponent implements OnInit {
+
+  searchForm = new FormGroup({
+    make: new FormControl(''),
+    model: new FormControl(''),
+    region: new FormControl(''),
+    firstReg: new FormControl(''),
+});
 
   constructor() { }
 

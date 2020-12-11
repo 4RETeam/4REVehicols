@@ -13,10 +13,11 @@ import { PreFooterComponent } from './components/pre-footer/pre-footer.component
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { HomeComponent } from './components/home/home.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, SearchComponent, UserComponent, DetailedSearchComponent, FooterComponent, PreFooterComponent, SearchBarComponent, SearchFormComponent, HomeComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+    imports: [BrowserModule, HttpClientModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 
