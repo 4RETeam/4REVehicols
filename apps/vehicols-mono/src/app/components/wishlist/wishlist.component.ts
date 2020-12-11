@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'vehicols-wishlist',
+  selector: 'vehiclos-wishlist',
   templateUrl: './wishlist.component.html',
   styleUrls: ['./wishlist.component.scss']
 })

@@ -1,5 +1,5 @@
 {
-  "npmScope": "vehicols",
+  "npmScope": "vehiclos",
   "affected": {
     "defaultBase": "master"
   },
@@ -23,12 +23,12 @@
     }
   },
   "projects": {
-    "vehicols-mono": {
+    "vehiclos-mono": {
       "tags": []
     },
-    "vehicols-mono-e2e": {
+    "vehiclos-mono-e2e": {
       "tags": [],
-      "implicitDependencies": ["vehicols-mono"]
+      "implicitDependencies": ["vehiclos-mono"]
     },
     "api": {
       "tags": []

@@ -1,32 +1,32 @@
 {
   "version": 1,
   "projects": {
-    "vehicols-mono": {
+    "vehiclos-mono": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/vehicols-mono",
-      "sourceRoot": "apps/vehicols-mono/src",
-      "prefix": "vehicols",
+      "root": "apps/vehiclos-mono",
+      "sourceRoot": "apps/vehiclos-mono/src",
+      "prefix": "vehiclos",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/vehicols-mono",
-            "index": "apps/vehicols-mono/src/index.html",
-            "main": "apps/vehicols-mono/src/main.ts",
-            "polyfills": "apps/vehicols-mono/src/polyfills.ts",
-            "tsConfig": "apps/vehicols-mono/tsconfig.app.json",
+            "outputPath": "dist/apps/vehiclos-mono",
+            "index": "apps/vehiclos-mono/src/index.html",
+            "main": "apps/vehiclos-mono/src/main.ts",
+            "polyfills": "apps/vehiclos-mono/src/polyfills.ts",
+            "tsConfig": "apps/vehiclos-mono/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/vehicols-mono/src/favicon.ico",
-              "apps/vehicols-mono/src/assets"
+              "apps/vehiclos-mono/src/favicon.ico",
+              "apps/vehiclos-mono/src/assets"
             ],
             "styles": [
-              "apps/vehicols-mono/src/styles.scss"
+              "apps/vehiclos-mono/src/styles.scss"
             ],
             "scripts": []
           },
@@ -34,8 +34,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/vehicols-mono/src/environments/environment.ts",
-                  "with": "apps/vehicols-mono/src/environments/environment.prod.ts"
+                  "replace": "apps/vehiclos-mono/src/environments/environment.ts",
+                  "with": "apps/vehiclos-mono/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -64,39 +64,39 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "vehicols-mono:build",
-            "proxyConfig": "apps/vehicols-mono/proxy.conf.json"
+            "browserTarget": "vehiclos-mono:build",
+            "proxyConfig": "apps/vehiclos-mono/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "vehicols-mono:build:production"
+              "browserTarget": "vehiclos-mono:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "vehicols-mono:build"
+            "browserTarget": "vehiclos-mono:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/vehicols-mono/tsconfig.app.json",
-              "apps/vehicols-mono/tsconfig.spec.json",
-              "apps/vehicols-mono/tsconfig.editor.json"
+              "apps/vehiclos-mono/tsconfig.app.json",
+              "apps/vehiclos-mono/tsconfig.spec.json",
+              "apps/vehiclos-mono/tsconfig.editor.json"
             ],
             "exclude": [
               "**/node_modules/**",
-              "!apps/vehicols-mono/**/*"
+              "!apps/vehiclos-mono/**/*"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/vehicols-mono/jest.config.js",
+            "jestConfig": "apps/vehiclos-mono/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -106,21 +106,21 @@
         }
       }
     },
-    "vehicols-mono-e2e": {
-      "root": "apps/vehicols-mono-e2e",
-      "sourceRoot": "apps/vehicols-mono-e2e/src",
+    "vehiclos-mono-e2e": {
+      "root": "apps/vehiclos-mono-e2e",
+      "sourceRoot": "apps/vehiclos-mono-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/vehicols-mono-e2e/cypress.json",
-            "tsConfig": "apps/vehicols-mono-e2e/tsconfig.e2e.json",
-            "devServerTarget": "vehicols-mono:serve"
+            "cypressConfig": "apps/vehiclos-mono-e2e/cypress.json",
+            "tsConfig": "apps/vehiclos-mono-e2e/tsconfig.e2e.json",
+            "devServerTarget": "vehiclos-mono:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "vehicols-mono:serve:production"
+              "devServerTarget": "vehiclos-mono:serve:production"
             }
           }
         },
@@ -128,11 +128,11 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/vehicols-mono-e2e/tsconfig.e2e.json"
+              "apps/vehiclos-mono-e2e/tsconfig.e2e.json"
             ],
             "exclude": [
               "**/node_modules/**",
-              "!apps/vehicols-mono-e2e/**/*"
+              "!apps/vehiclos-mono-e2e/**/*"
             ]
           }
         }
@@ -273,5 +273,5 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "vehicols-mono"
+  "defaultProject": "vehiclos-mono"
 }

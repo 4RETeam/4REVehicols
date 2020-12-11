@@ -2,7 +2,7 @@
   "targets": {
     "vehiclos": {
       "hosting": {
-        "vehicols-mono": [
+        "vehiclos-mono": [
           "vehiclos"
         ]
       }

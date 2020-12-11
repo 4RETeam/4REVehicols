@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@vehicols/api-interfaces';
+import { Message } from '@vehiclos/api-interfaces';
 
 @Component({
-  selector: 'vehicols-root',
+  selector: 'vehiclos-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

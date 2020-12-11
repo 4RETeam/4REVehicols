@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "vehicols-mono",
-      "public": "dist/apps/vehicols-mono",
+      "target": "vehiclos-mono",
+      "public": "dist/apps/vehiclos-mono",
       "ignore": [
         "**/.*"
       ],
