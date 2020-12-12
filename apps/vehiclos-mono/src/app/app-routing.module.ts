@@ -5,6 +5,7 @@ import {BuyComponent} from "./components/buy/buy.component";
 import {SellComponent} from "./components/sell/sell.component";
 import {AboutUsComponent} from "./components/about-us/about-us.component";
 
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'buy', component: BuyComponent},

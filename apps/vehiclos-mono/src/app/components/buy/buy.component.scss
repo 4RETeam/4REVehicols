@@ -1,0 +1,22 @@
+@import "./../../../styles";
+.mainBlock {
+    .leftBlock {
+        background: #F9F9F9;
+        box-shadow: 9px 4px 18px rgba(0, 0, 0, 0.25);
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        .logo {
+            font-family: $basic-fonts;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 56px;
+            color: #262D31;
+            margin: 2rem 0;
+        }
+    }
+    .rightBlock {}
+}
