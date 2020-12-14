@@ -1,9 +1,11 @@
 <div class="headings">
-
+  <h2 class="price">Price</h2>
+  <h2>Car Locations</h2>
 </div>
 <div class="sliders">
   <div class="mono-range-slider">
-    <input type="range" min="1" max="100" value="50" class="radius-slider simple" id="radius">
+    <input (input)="setSimpleValue($event.target)" type="range" id="range" name="range" class="simple" min="0" max="100">
+    <div class="range" style="{{calculateSimpleStyle()}}"></div>
   </div>
   <div class="multi-range-slider">
     <input (input)="setLeftValue($event.target)" (mouseover)="leftHover()" (mousedown)="leftDown()" (mouseup)="leftUp()"
@@ -19,3 +21,4 @@
     </div>
   </div>
 </div>
+<vehiclos-search-button></vehiclos-search-button>

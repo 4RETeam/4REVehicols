@@ -10,14 +10,32 @@ import {log} from "util";
 export class SearchBottomComponent implements OnInit {
   leftClasses = [];
   rightClasses = [];
-  leftValue = 0;
-  rightValue = 100;
+  leftValue = 20;
+  rightValue = 80;
   leftPercent = '';
   rightPercent = '';
   rangeLeftPercent = '';
   rangeRightPercent = '';
 
+  simpleValue= 50;
+  simplePercent= '';
+
   constructor() {
+  }
+
+  setSimpleValue(e: EventTarget = null): void {
+    const newValue = e !== null ? e as HTMLInputElement : null;
+    const max = 100;
+
+    this.simpleValue = parseInt(newValue.value, 10);
+
+    const percent = (max -this.simpleValue -2);
+
+this.simplePercent = percent + '%';
+  }
+
+  calculateSimpleStyle():string {
+    return 'right: ' + this.simplePercent+"; ";
   }
 
   setLeftValue(e: EventTarget = null): void {
@@ -51,6 +69,7 @@ export class SearchBottomComponent implements OnInit {
     const max = 100;
 
     const res  = newValue !== null ? Math.max(parseInt(newValue.value, 10), this.leftValue + 1).toString() : '100';
+
     this.rightValue = parseInt(res, 10);
 
 

@@ -20,6 +20,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { ProductComponent } from './components/product/product.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { SearchBottomComponent } from './components/Home/search-bottom/search-bottom.component';
+import { SearchButtonComponent } from './components/Home/search-button/search-button.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SearchBottomComponent } from './components/Home/search-bottom/search-bo
     WishlistComponent,
     ProductComponent,
     BuyComponent,
-    SearchBottomComponent
+    SearchBottomComponent,
+    SearchButtonComponent
   ],
   imports: [
       BrowserModule,

@@ -1,7 +1,7 @@
 <div class="search-wrap">
   <div class="words">
-    <div class="new active">NEW</div>
-    <div class="used">USED</div>
+    <div (click)="changeActive($event.target, 0)" id="NEW" class="new {{newClasses}}">NEW</div>
+    <div (click)="changeActive($event.target, 1)" id="USED" class="used {{usedClasses}}">USED</div>
   </div>
   <vehiclos-search-bar></vehiclos-search-bar>
   <vehiclos-search-form></vehiclos-search-form>

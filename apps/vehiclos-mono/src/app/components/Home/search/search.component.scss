@@ -8,13 +8,15 @@
   .words {
     text-align: center;
     .new {
+      cursor: pointer;
       margin: 52px 120px 0 0;
       flex: 1;
       display: inline-block;
-      font-weight: 700;
+
     }
     .active {
       position: relative;
+      font-weight: 700;
       &::after {
         bottom: -0.5em;
         left: 0.1em;
@@ -26,10 +28,11 @@
       }
     }
     .used {
+      cursor: pointer;
+
       flex: 1;
       margin: 52px 0 0 120px;
       display: inline-block;
-      font-weight: 500;
     }
   }
   *{

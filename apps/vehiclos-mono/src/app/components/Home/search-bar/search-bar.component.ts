@@ -6,8 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent implements OnInit {
-
+  activeItem = 'car';
+  activeElem = null as HTMLDivElement;
   constructor() { }
+
+  moveActive(me:any, e: EventTarget) {
+    this.activeElem = document.getElementById('active-thing') as HTMLDivElement;
+    const newX = me.offsetX > 0 ? me.layerX - me.offsetX - 20 : me.layerX - 20;
+    const newValue = e !== null ? e as HTMLDivElement : null;
+    console.log(me);
+
+    this.activeElem.style.left = newX+'px';
+    this.activeItem = newValue.id !== null ? newValue.id : 'car';
+
+  }
 
   ngOnInit(): void {
   }

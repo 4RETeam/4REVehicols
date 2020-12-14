@@ -1,6 +1,7 @@
 @import "apps/vehiclos-mono/src/styles";
 
 .search-bar {
+  user-select: none;
   flex: 0 0 100%;
   display: flex;
   flex-direction: row;
@@ -15,9 +16,14 @@
     align-items: center;
     justify-content: center;
     height: 100px;
+    img {
+      pointer-events: none;
+      user-select: none;
+    }
   }
 
   .active {
+    user-select: none;
     width: 150px;
     height: 134px;
     position: absolute;
@@ -30,7 +36,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
     img {
+
+      user-select: none;
+      pointer-events: none;
       filter: drop-shadow(0px 1px 7px #17E2B1);
     }
   }
