@@ -2,10 +2,18 @@ import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CategoriesModule } from './categories/categories.module';
+import { UserModule } from './user/user.module';
+import { MongooseModule } from "@nestjs/mongoose";
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [CategoriesModule],
+  imports: [UserModule, MongooseModule.forRoot('mongodb+srv://eduards:12345@cluster0.4pwpp.mongodb.net/vehicols?retryWrites=true&w=majority',
+  {
+    useFindAndModify: false,
+    useCreateIndex: true,
+  }), 
+  AuthModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
