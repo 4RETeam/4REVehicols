@@ -16,6 +16,9 @@
     align-items: center;
     justify-content: center;
     height: 100px;
+    &:hover{
+      cursor: pointer;
+    }
     img {
       pointer-events: none;
       user-select: none;
