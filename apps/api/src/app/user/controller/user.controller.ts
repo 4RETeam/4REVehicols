@@ -1,47 +1,53 @@
-import {Body, Controller, Delete, Get, Param, Post, Put,UsePipes, ValidationPipe} from '@nestjs/common';
-import {User} from "../models/user.schema";
-import {Observable} from "rxjs";
+import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
+import { IUser } from '../models/user.interface';
+import {Observable, of, pipe} from "rxjs";
 import {UserService} from "../service/user.service";
-import { UserDto, UserParamsDto } from '../dto/user.dto';
 import { Roles } from '../../enums/roles.decorator';
 import { Role } from '../../enums/role.enum';
-import { LoginDto } from '../dto/login.dto';
+import { catchError, map } from 'rxjs/operators';
 
-@Controller('user')
+@Controller('users')
 export class UserController {
 
   constructor( private readonly userService: UserService) {
   }
 
   @Post()
-  @UsePipes(new ValidationPipe({ transform: true }))
-  createUser(@Body() user: User): Observable<User | boolean> {
-    return this.userService.create(user);
+  createUser(@Body() user: IUser): Observable<IUser | Object> {
+    return this.userService.create(user).pipe(
+      map((user: IUser) => user),
+        catchError(err => of({error: err.message}))
+      );
+  }
+
+  @Post('login')
+  login(@Body() user: IUser): Observable<Object> {
+    return this.userService.login(user).pipe(
+      map((jwt: string) => {
+        return {access_token: jwt}
+      }) 
+    )
   }
 
   @Get(':_id')
-  findOne(@Param() params): Observable<User> {
+  findOne(@Param() params): Observable<IUser> {
     return this.userService.findOne(params._id);
   }
 
   @Get()
   @Roles(Role.Admin)
-  findAll(): Observable<User[]> {
+  findAll(): Observable<IUser[]> {
     return this.userService.findAll();
   }
 
   @Delete(':_id')
-    deleteOne(@Param('_:id') _id: string): Observable<User> {
+    deleteOne(@Param('_:id') _id: string): Observable<IUser> {
       return this.userService.deleteOne(_id);
     }
 
     @Put(':_id')
-    updateOne(@Param(':_id') _id: string, @Body() user: User): Observable<User> {
+    updateOne(@Param(':_id') _id: string, @Body() user: IUser): Observable<IUser> {
       return this.userService.updateOne(_id, user);
     }
 
-    @Post('/login')
-    login(@Body() login: LoginDto): User | boolean {
-      return this.userService.login(login)
-    }
 }
