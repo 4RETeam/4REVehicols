@@ -13,7 +13,7 @@ import { PreFooterComponent } from './components/Layout/pre-footer/pre-footer.co
 import { SearchBarComponent } from './components/Home/search-bar/search-bar.component';
 import { SearchFormComponent } from './components/Home/search-form/search-form.component';
 import { HomeComponent } from './components/Home/home/home.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { SellComponent } from './components/sell/sell.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
@@ -21,6 +21,10 @@ import { ProductComponent } from './components/product/product.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { SearchBottomComponent } from './components/Home/search-bottom/search-bottom.component';
 import { SearchButtonComponent } from './components/Home/search-button/search-button.component';
+import { LoginComponent } from './components/Layout/login/login.component';
+import { RegisterComponent } from './components/Layout/register/register.component';
+import { RegisterFormComponent } from './components/Layout/register-form/register-form.component';
+import { LoginFormComponent } from './components/Layout/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -40,14 +44,19 @@ import { SearchButtonComponent } from './components/Home/search-button/search-bu
     ProductComponent,
     BuyComponent,
     SearchBottomComponent,
-    SearchButtonComponent
+    SearchButtonComponent,
+    LoginComponent,
+    RegisterComponent,
+    RegisterFormComponent,
+    LoginFormComponent
   ],
   imports: [
-      BrowserModule,
-      HttpClientModule,
-      AppRoutingModule,
-      ReactiveFormsModule
-    ],
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 

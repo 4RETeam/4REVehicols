@@ -33,31 +33,36 @@
             flex-direction: row;
             .nav-list-item {
                 margin: 0 $standard-space*2;
+                width: 150px;
                 .nav-link {
                     font-weight: 400;
                     font-size: 18px;
                     text-decoration: none;
                     color: $text-black;
                     font-family: 'Roboto-Regular', sans-serif;
+
                 }
                 .current {
+                  position: relative;
                     font-family: 'Roboto-Regular', sans-serif;
                     font-weight: 600;
-                }
-            }
-            .active {
-                position: relative;
-                font-family: 'Roboto-Regular', sans-serif;
-                font-weight: 500;
-                &::after {
-                    bottom: -0.5em;
-                    left: 0.5em;
-                    min-width: 50px;
+                  &::after {
+                    bottom: -0.2em;
+                    left: calc(50% - 25px);
+                    width: 50px;
                     min-height: 3px;
                     position: absolute;
                     content: ' ';
                     background-color: $client-green;
+                  }
                 }
+            }
+            .active {
+              width: 150px;
+                position: relative;
+                font-family: 'Roboto-Regular', sans-serif;
+                font-weight: 500;
+
             }
         }
     }
