@@ -24,8 +24,6 @@ import { LoginComponent } from './components/Layout/login/login.component';
 import { RegisterComponent } from './components/Layout/register/register.component';
 import { RegisterFormComponent } from './components/Layout/register-form/register-form.component';
 import { LoginFormComponent } from './components/Layout/login-form/login-form.component';
-import { SellComponent } from './components/Catalogue/sell/sell.component';
-import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.component';
 import { MultiRangeSliderComponent } from './components/MultiUseComponents/multi-range-slider/multi-range-slider.component';
 import { SingleRangeSliderComponent } from './components/MultiUseComponents/single-range-slider/single-range-slider.component';
 import { SelectComponent } from './components/MultiUseComponents/select/select.component';
@@ -54,9 +52,6 @@ import {SellMModule} from'./components/Catalogue/sell-m/sell-m.module'
     RegisterComponent,
     RegisterFormComponent,
     LoginFormComponent,
-
-    SellComponent,
-    SellConfComponent,
     MultiRangeSliderComponent,
     SingleRangeSliderComponent,
     SelectComponent,

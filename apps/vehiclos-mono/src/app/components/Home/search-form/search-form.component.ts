@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
@@ -7,15 +7,16 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./search-form.component.scss']
 })
 export class SearchFormComponent implements OnInit {
-
+  a = [{route: 'Model'}, {route: 'Model'}, {route: 'Model'}, {route: 'Model'}, {route: 'Model'}, {route: 'Model'}];
   searchForm = new FormGroup({
     make: new FormControl(''),
     model: new FormControl(''),
     region: new FormControl(''),
     firstReg: new FormControl(''),
-});
+  });
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 <div class="mono-range-slider">
   <input (input)="setSimpleValue($event.target)" type="range" id="range" name="range" class="simple" min="0" max="{{max}}">
   <div class="range" style="{{calculateSimpleStyle()}}"></div>
+  <p style="{{calculateTextStyle()}}">${{simpleValue}}</p>
 </div>

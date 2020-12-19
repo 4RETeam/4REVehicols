@@ -7,7 +7,15 @@
   <div class="slider">
     <div class="track"></div>
     <div class="range" style="{{calculateRangeStyle()}}"></div>
-    <div class="thumb left {{calculateLeftClasses()}}" style="{{calculateThumbStyle(0)}}"></div>
-    <div class="thumb right {{calculateRightClasses()}}" style="{{calculateThumbStyle(1)}}"></div>
+    <div class="thumb left {{calculateLeftClasses()}}" style="{{calculateThumbStyle(0)}}">
+      <p>
+        ${{leftValue}}
+      </p>
+    </div>
+    <div class="thumb right {{calculateRightClasses()}}" style="{{calculateThumbStyle(1)}}">
+      <p>
+        ${{rightValue}}
+      </p>
+    </div>
   </div>
 </div>

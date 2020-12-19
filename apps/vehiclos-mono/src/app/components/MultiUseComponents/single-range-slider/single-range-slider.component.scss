@@ -4,6 +4,7 @@
   margin-right: 16px;
   margin-top: -11px;
 
+
   .simple {
     -webkit-appearance: none;
     outline: none;
@@ -47,8 +48,12 @@
 
 
   }
-
+  p {
+    position: absolute;
+    top: 25px;
+  }
   .range {
+
     position: absolute;
     left: 0;
     top: 10px;

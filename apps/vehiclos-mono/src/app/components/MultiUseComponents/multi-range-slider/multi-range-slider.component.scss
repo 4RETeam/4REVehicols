@@ -1,7 +1,11 @@
 .multi-range-slider {
   width: 267px;
   margin-left: 16px;
-
+  p {
+    position: absolute;
+    top: 25px;
+    right: -5px;
+  }
   .slider {
     position: relative;
     z-index: 1;
@@ -33,6 +37,7 @@
     }
 
     .thumb {
+
       position: absolute;
       z-index: 3;
       top: 3px;

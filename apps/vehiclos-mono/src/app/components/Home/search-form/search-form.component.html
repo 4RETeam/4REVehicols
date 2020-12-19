@@ -1,22 +1,19 @@
-<form class="short-form" [formGroup]="searchForm">
+<div class="short-form" >
   <div class="form-group">
-    <select class="form-select" formControlName="make" name="make" id="make">
+    <select class="form-select" name="make" id="make">
       <option value="">Make</option>
       <option value=""></option>
     </select>
-    <select class="form-select" formControlName="model" name="model" id="model">
-      <option value="">Model</option>
-      <option value=""></option>
-    </select>
+    <vehiclos-select [options]="a"></vehiclos-select>
   </div>
   <div class="form-group">
-    <select class="form-select" formControlName="region" name="region" id="region">
+    <select class="form-select"  name="region" id="region">
       <option value="">Region</option>
       <option value=""></option>
     </select>
-    <select class="form-select" formControlName="firstReg" name="firstReg" id="firstReg">
+    <select class="form-select"  name="firstReg" id="firstReg">
       <option value="">First Registration</option>
       <option value=""></option>
     </select>
   </div>
-</form>
+</div>
