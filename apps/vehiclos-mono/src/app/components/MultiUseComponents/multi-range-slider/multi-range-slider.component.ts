@@ -1,13 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {ParseIntPipe} from "@nestjs/common";
-import {log} from "util";
+import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'vehiclos-search-bottom',
-  templateUrl: './search-bottom.component.html',
-  styleUrls: ['./search-bottom.component.scss']
+  selector: 'vehiclos-multi-range-slider',
+  templateUrl: './multi-range-slider.component.html',
+  styleUrls: ['./multi-range-slider.component.scss']
 })
-export class SearchBottomComponent implements OnInit {
+export class MultiRangeSliderComponent {
+
+  @Input() public min: number;
+  @Input() public max: number;
   leftClasses = [];
   rightClasses = [];
   leftValue = 20;
@@ -20,18 +21,13 @@ export class SearchBottomComponent implements OnInit {
   constructor() {
   }
 
-
-
   setLeftValue(e: EventTarget = null): void {
     const newValue = e !== null ? e as HTMLInputElement : null;
 
-    const min = 0;
-    const max = 100;
-
-    const res  = newValue !== null ? Math.min(parseInt(newValue.value, 10), this.rightValue - 1).toString(): '0';
+    const res  = newValue !== null ? Math.min(parseInt(newValue.value, 10), this.rightValue - 1).toString(): this.min.toString();
     this.leftValue = parseInt(res, 10);
 
-    const percent = ((this.leftValue - min) / (max - min)) * 100;
+    const percent = ((this.leftValue - this.min) / (this.max - this.min)) * 100;
 
     this.leftPercent = percent + "%";
     this.rangeLeftPercent = percent + "%";
@@ -49,18 +45,15 @@ export class SearchBottomComponent implements OnInit {
   setRightValue(e: EventTarget = null): void {
     const newValue = e !== null ? e as HTMLInputElement : null;
 
-    const min = 0;
-    const max = 100;
-
-    const res  = newValue !== null ? Math.max(parseInt(newValue.value, 10), this.leftValue + 1).toString() : '100';
+    const res  = newValue !== null ? Math.max(parseInt(newValue.value, 10), this.leftValue + 1).toString() : this.max.toString();
 
     this.rightValue = parseInt(res, 10);
 
 
-    const percent = ((this.rightValue - min) / (max - min)) * 100;
+    const percent = ((this.rightValue - this.min) / (this.max - this.min)) * 100;
 
-    this.rightPercent = (100 - percent) + "%";
-    this.rangeRightPercent = (100 - percent) + "%";
+    this.rightPercent = (this.max - percent) + "%";
+    this.rangeRightPercent = (this.max - percent) + "%";
   }
 
   calculateRightClasses(): string {
@@ -120,8 +113,10 @@ export class SearchBottomComponent implements OnInit {
     }
 
   }
-
-  ngOnInit(): void {
-  }
-
 }
+
+enum ThumbType {
+  LEFT,
+  RIGHT
+}
+

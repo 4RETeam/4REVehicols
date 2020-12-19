@@ -26,6 +26,9 @@ import { RegisterFormComponent } from './components/Layout/register-form/registe
 import { LoginFormComponent } from './components/Layout/login-form/login-form.component';
 import { SellComponent } from './components/Catalogue/sell/sell.component';
 import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.component';
+import { MultiRangeSliderComponent } from './components/MultiUseComponents/multi-range-slider/multi-range-slider.component';
+import { SingleRangeSliderComponent } from './components/MultiUseComponents/single-range-slider/single-range-slider.component';
+import { SelectComponent } from './components/MultiUseComponents/select/select.component';
 
 
 @NgModule({
@@ -52,6 +55,9 @@ import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.co
     LoginFormComponent,
     SellComponent,
     SellConfComponent,
+    MultiRangeSliderComponent,
+    SingleRangeSliderComponent,
+    SelectComponent,
   ],
   imports: [
     BrowserModule,
