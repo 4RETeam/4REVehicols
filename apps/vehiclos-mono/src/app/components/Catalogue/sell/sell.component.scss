@@ -1,0 +1,60 @@
+
+@import "./../../../../styles";
+.main{
+	display: flex;
+	flex-wrap: wrap;
+	
+	width: 1590px;
+	height: 1080px;
+	.element-wrapper{
+		position: relative;
+		width: 436px;
+		height: 355px;
+		margin: auto;
+
+		.car-name{
+			position: absolute;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 21px;
+			top:10px;
+			padding: 5px 10px;
+			left:-10px;
+			width: 401px;
+			height: 42px;
+			box-shadow: 6px 9px 8px rgba(0, 0, 0, 0.25);
+			border-radius: 20px 0px 0px 0px;
+			background:$client-green;
+			z-index: 2;
+		}
+		img{
+			position: absolute;
+			border-radius: 40px;
+			width: 435.87px;
+			height: 354.55px;
+			z-index: 1;
+			
+		}
+		.car-price{
+			position: absolute;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 36px;
+			line-height: 42px;
+			padding: 5px 10px;
+			text-align: center;
+			width: 140px;
+			height: 39px;
+			right: -10px;
+			bottom:10px;
+			box-shadow: 6px 9px 8px rgba(0, 0, 0, 0.25);
+			border-radius: 0px 0px 20px 0px;
+			background:$client-green;
+			z-index: 2;
+
+		}
+	}
+}
