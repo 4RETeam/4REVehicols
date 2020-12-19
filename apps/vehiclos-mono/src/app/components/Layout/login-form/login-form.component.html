@@ -1,0 +1,11 @@
+<form>
+  <div>
+    <label for="email">Email: </label>
+    <input required email ngModel #email='ngModel'  (change)="log(email)"  id="email" name="email" type="email">
+    <div *ngIf="email.touched && !email.valid"> <span *ngIf="email.errors.email">Email neprevilinij</span></div>
+  </div>
+  <div>
+    <label for="pass">Password: </label>
+    <input required min="3" ngModel #pass='ngModel' (change)="log(pass)" id="pass" name="pass" type="password">
+   </div>
+</form>

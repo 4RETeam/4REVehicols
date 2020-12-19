@@ -1,0 +1,7 @@
+.form-wrapper{
+  scroll-behavior: smooth;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+}
