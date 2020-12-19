@@ -14,7 +14,6 @@ import { SearchBarComponent } from './components/Home/search-bar/search-bar.comp
 import { SearchFormComponent } from './components/Home/search-form/search-form.component';
 import { HomeComponent } from './components/Home/home/home.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { SellComponent } from './components/sell/sell.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { ProductComponent } from './components/product/product.component';
@@ -25,6 +24,9 @@ import { LoginComponent } from './components/Layout/login/login.component';
 import { RegisterComponent } from './components/Layout/register/register.component';
 import { RegisterFormComponent } from './components/Layout/register-form/register-form.component';
 import { LoginFormComponent } from './components/Layout/login-form/login-form.component';
+import { SellComponent } from './components/Catalogue/sell/sell.component';
+import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,6 @@ import { LoginFormComponent } from './components/Layout/login-form/login-form.co
     SearchBarComponent,
     SearchFormComponent,
     HomeComponent,
-    SellComponent,
     AboutUsComponent,
     WishlistComponent,
     ProductComponent,
@@ -48,14 +49,16 @@ import { LoginFormComponent } from './components/Layout/login-form/login-form.co
     LoginComponent,
     RegisterComponent,
     RegisterFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    SellComponent,
+    SellConfComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
