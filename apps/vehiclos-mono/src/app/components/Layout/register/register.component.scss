@@ -1,19 +1,12 @@
 .screen{
   display: block;
   transition-duration: 0.1s;
-  background-color: #00000000;
+pointer-events: none;
   position: fixed;
   height: 100%;
   width: 100%;
   z-index: 3;
   top: 0;
-  pointer-events: all;
-}
-.screen-active {
-  background-color: #00000060;
-}
-.modal-active{
-
 }
 
 .modal {

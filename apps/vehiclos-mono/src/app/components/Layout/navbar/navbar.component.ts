@@ -43,6 +43,11 @@ export class NavbarComponent implements OnInit {
     this.isRegister = !this.isRegister;
     this.isRegister = forcedValue !== null ? forcedValue : this.isRegister;
   }
+
+  switchLogin(forcedValue: boolean | null = null) {
+    this.isLogin = !this.isLogin;
+    this.isLogin = forcedValue !== null ? forcedValue : this.isLogin;
+  }
 }
 
 class Button {

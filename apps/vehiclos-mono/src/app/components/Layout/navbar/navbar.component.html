@@ -14,7 +14,7 @@
       Register
       </button>
             <span>/</span>
-            <button class="nav-btn">
+            <button (click)="switchLogin()"class="nav-btn">
       Login
       </button>
             <img class="icon" src="../../../../assets/svg/user.svg" />
@@ -32,5 +32,5 @@
         </div>
     </div>
 </div>
-<vehiclos-login ></vehiclos-login>
+<vehiclos-login (visibleSwitch)="switchLogin($event)" [isVisible]="isLogin" ></vehiclos-login>
 <vehiclos-register (visibleSwitch)="switchRegister($event)" [isVisible]="isRegister"></vehiclos-register>

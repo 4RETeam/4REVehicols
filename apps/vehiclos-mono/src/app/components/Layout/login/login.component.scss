@@ -1,3 +1,25 @@
-*{
-  display: none;
+.screen{
+  display: block;
+  transition-duration: 0.1s;
+  pointer-events: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+}
+
+.modal {
+  padding: 30px 30px;
+  z-index: 4;
+  position: fixed;
+  width: 375px;
+  height: 300px;
+  transition-duration: 0.2s;
+  top: calc(50% - 150px);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }

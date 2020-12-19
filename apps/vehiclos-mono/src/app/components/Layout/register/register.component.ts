@@ -1,5 +1,4 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'vehiclos-register',
@@ -11,6 +10,11 @@ export class RegisterComponent implements OnInit {
 
   @Input() public isVisible: boolean;
   style :string;
+  shadeStyle: string;
+
+  calculateShadeStyle(): string {
+    return this.isVisible ? 'pointer-events: all; background-color: #00000060;' : '  pointer-events: none;   background-color: #00000000;';
+  }
 
   switch(): void {
     this.visibleSwitch.emit(false);
@@ -25,6 +29,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.style = 'left: calc(125% - 187.5px);';
+    this.shadeStyle = 'pointer-events: none;   background-color: #00000000;'
   }
 
 }
