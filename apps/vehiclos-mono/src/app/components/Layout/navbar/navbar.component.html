@@ -10,7 +10,7 @@
 
     <div class="right">
         <div class="user-control">
-            <button class="nav-btn">
+            <button (click)="switchRegister()" class="nav-btn">
       Register
       </button>
             <span>/</span>
@@ -32,3 +32,5 @@
         </div>
     </div>
 </div>
+<vehiclos-login ></vehiclos-login>
+<vehiclos-register (visibleSwitch)="switchRegister($event)" [isVisible]="isRegister"></vehiclos-register>

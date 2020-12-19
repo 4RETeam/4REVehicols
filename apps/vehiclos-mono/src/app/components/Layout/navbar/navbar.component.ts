@@ -8,16 +8,40 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   navButtons: Button[] = [new Button('SEARCH', true, ''),new Button('SELL', false, 'sell'), new Button('ABOUT US', false, 'about-us'), new Button('WISHLIST', false, 'about-us')];
+  private _isRegister: boolean;
+  private _isLogin:boolean;
+
+  get isLogin(): boolean {
+    return this._isLogin;
+  }
+
+  set isLogin(value: boolean) {
+    this._isLogin = value;
+  }
+
+  get isRegister(): boolean {
+    return this._isRegister;
+  }
+
+  set isRegister(value: boolean) {
+    this._isRegister = value;
+  }
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
   changePage(button: Button) {
     for (const item of this.navButtons) {
       item.isActive = button === item;
     }
+  }
+
+  switchRegister(forcedValue: boolean | null = null) {
+    this.isRegister = !this.isRegister;
+    this.isRegister = forcedValue !== null ? forcedValue : this.isRegister;
   }
 }
 

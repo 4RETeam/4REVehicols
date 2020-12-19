@@ -8,6 +8,8 @@ import {AbstractControl, FormControl, FormGroup, NgModel, ValidatorFn, Validator
 })
 export class RegisterFormComponent implements OnInit {
 
+
+
   constructor(
   ) { }
 
@@ -17,4 +19,5 @@ export class RegisterFormComponent implements OnInit {
   log(x: NgModel) {
     console.log(x);
   }
+
 }

@@ -22,7 +22,7 @@
   position: fixed;
   width: 375px;
   height: 300px;
-  left: calc(125% - 187.5px);
+  transition-duration: 0.2s;
   top: calc(50% - 150px);
   background-color: #fff;
   display: flex;
