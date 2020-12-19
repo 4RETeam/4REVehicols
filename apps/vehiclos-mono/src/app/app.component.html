@@ -1,4 +1,11 @@
-<vehiclos-navbar></vehiclos-navbar>
+
+
+<h1 *ngIf="route === '/sell' then ifBlock else elseBlock">IF BOB</h1>
+<ng-template #ifBlock>
+ </ng-template>
+ <ng-template #elseBlock>
+	<vehiclos-navbar></vehiclos-navbar>
+ </ng-template>
 <router-outlet></router-outlet>
 <vehiclos-pre-footer></vehiclos-pre-footer>
 <vehiclos-footer></vehiclos-footer>

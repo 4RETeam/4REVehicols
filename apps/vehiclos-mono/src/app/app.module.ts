@@ -24,9 +24,7 @@ import { LoginComponent } from './components/Layout/login/login.component';
 import { RegisterComponent } from './components/Layout/register/register.component';
 import { RegisterFormComponent } from './components/Layout/register-form/register-form.component';
 import { LoginFormComponent } from './components/Layout/login-form/login-form.component';
-import { SellComponent } from './components/Catalogue/sell/sell.component';
-import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.component';
-
+import {SellMModule} from'./components/Catalogue/sell-m/sell-m.module'
 
 @NgModule({
   declarations: [
@@ -50,8 +48,7 @@ import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.co
     RegisterComponent,
     RegisterFormComponent,
     LoginFormComponent,
-    SellComponent,
-    SellConfComponent,
+ 
   ],
   imports: [
     BrowserModule,
@@ -59,6 +56,7 @@ import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.co
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    SellMModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
