@@ -28,7 +28,8 @@ import { MultiRangeSliderComponent } from './components/MultiUseComponents/multi
 import { SingleRangeSliderComponent } from './components/MultiUseComponents/single-range-slider/single-range-slider.component';
 import { SelectComponent } from './components/MultiUseComponents/select/select.component';
 
-import {SellMModule} from'./components/Catalogue/sell-m/sell-m.module'
+import {SellMModule} from'./components/Catalogue/sell-m/sell-m.module';
+import { CheckboxComponent } from './components/MultiUseComponents/checkbox/checkbox.component'
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import {SellMModule} from'./components/Catalogue/sell-m/sell-m.module'
     MultiRangeSliderComponent,
     SingleRangeSliderComponent,
     SelectComponent,
+    CheckboxComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detailed-search.component.scss']
 })
 export class DetailedSearchComponent implements OnInit {
-
+  a = [{name: 'suka'}, {name: 'blyat'}];
   constructor() { }
 
   ngOnInit(): void {
