@@ -5,12 +5,12 @@ h3{
 }
 .mono-range-slider {
     position: relative;
-    width: 237px;
-    margin-top: -11px;
+    width: 267px;
     .simple {
         -webkit-appearance: none;
         outline: none;
-        width: 237px;
+        width: 267px;
+      position: absolute;
         &::-webkit-slider-runnable-track {
             border-radius: 25px;
             height: 10px;
@@ -46,7 +46,7 @@ h3{
     .range {
         position: absolute;
         left: 0;
-        top: 10px;
+        top: 2px;
         height: 10px;
         bottom: 0;
         border-radius: 5px;
