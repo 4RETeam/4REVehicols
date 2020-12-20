@@ -1,22 +1,21 @@
 <h3>{{name}}</h3>
 <div class="multi-range-slider">
-  <input (input)="setLeftValue($event.target)" (mouseover)="leftHover()" (mousedown)="leftDown()" (mouseup)="leftUp()"
-         (mouseout)="leftUnHover()" type="range" min="1" max="100" value="20" class="price-slider" id="input-left">
-  <input (input)="setRightValue($event.target)" (mouseover)="rightHover()" (mousedown)="rightDown()"
-         (mouseup)="rightUp()" (mouseout)="rightUnHover()" type="range" min="1" max="100" value="80"
-         class="price-slider" id="input-right">
-  <div class="slider">
-    <div class="track"></div>
-    <div class="range" style="{{calculateRangeStyle()}}"></div>
-    <div class="thumb left {{calculateLeftClasses()}}" style="{{calculateThumbStyle(0)}}">
-      <p>
-        ${{leftValue}}
-      </p>
+    <input (input)="setLeftValue($event.target)" (mouseover)="leftHover()" (mousedown)="leftDown()" (mouseup)="leftUp()" (mouseout)="leftUnHover()" type="range" min="1" max="100" value="20" class="price-slider" id="input-left">
+    <input (input)="setRightValue($event.target)" (mouseover)="rightHover()" (mousedown)="rightDown()" (mouseup)="rightUp()" (mouseout)="rightUnHover()" type="range" min="1" max="100" value="80" class="price-slider" id="input-right">
+    <div class="slider">
+        <div class="track"></div>
+        <div class="range" style="{{calculateRangeStyle()}}"></div>
+        <div class="thumb left {{calculateLeftClasses()}}" style="{{calculateThumbStyle(0)}}">
+
+        </div>
+        <p class="lVal">
+            ${{leftValue}}
+        </p>
+        <div class="thumb right {{calculateRightClasses()}}" style="{{calculateThumbStyle(1)}}">
+
+        </div>
+        <p class="rVal">
+            ${{rightValue}}
+        </p>
     </div>
-    <div class="thumb right {{calculateRightClasses()}}" style="{{calculateThumbStyle(1)}}">
-      <p>
-        ${{rightValue}}
-      </p>
-    </div>
-  </div>
 </div>

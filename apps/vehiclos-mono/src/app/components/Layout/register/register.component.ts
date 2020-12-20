@@ -24,11 +24,11 @@ export class RegisterComponent implements OnInit {
   }
 
   calculateStyle(): string {
-    return this.isVisible ? 'left: calc(50% - 187.5px);' : 'left: calc(125% - 187.5px);';
+    return this.isVisible ? 'right: 0' : 'right: -100%;';
   }
 
   ngOnInit(): void {
-    this.style = 'left: calc(125% - 187.5px);';
+    this.style = 'right: calc(125% - 187.5px);';
     this.shadeStyle = 'pointer-events: none;   background-color: #00000000;'
   }
 
