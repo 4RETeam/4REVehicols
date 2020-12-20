@@ -28,7 +28,9 @@ import { MultiRangeSliderComponent } from './components/MultiUseComponents/multi
 import { SingleRangeSliderComponent } from './components/MultiUseComponents/single-range-slider/single-range-slider.component';
 import { SelectComponent } from './components/MultiUseComponents/select/select.component';
 
-import {SellMModule} from'./components/Catalogue/sell-m/sell-m.module'
+
+import { SellComponent } from './components/Catalogue/sell/sell.component';
+import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import {SellMModule} from'./components/Catalogue/sell-m/sell-m.module'
     MultiRangeSliderComponent,
     SingleRangeSliderComponent,
     SelectComponent,
+    SellComponent,
+    SellConfComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,7 @@ import {SellMModule} from'./components/Catalogue/sell-m/sell-m.module'
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    SellMModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent],
