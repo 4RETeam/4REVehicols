@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class SingleRangeSliderComponent implements OnInit {
   @Input() public max: number;
+  @Input() public name: string;
   simpleValue= 50;
   simplePercent= '50';
 

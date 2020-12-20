@@ -1,13 +1,19 @@
+h3{
+  width: inherit;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
 .mono-range-slider {
   position: relative;
   width: 237px;
-  margin-right: 16px;
-  margin-top: -11px;
+  height: 10px;
 
 
   .simple {
     -webkit-appearance: none;
     outline: none;
+    position: absolute;
+    top: -2px;
     width: 237px;
 
 
@@ -56,7 +62,7 @@
 
     position: absolute;
     left: 0;
-    top: 10px;
+    //top: 10px;
 
     height: 10px;
     bottom: 0;

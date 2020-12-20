@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './components/Layout/navbar/navbar.component';
 import { SearchComponent } from './components/Home/search/search.component';
 import { UserComponent } from './components/user/user.component';
-import { DetailedSearchComponent } from './components/detailed-search/detailed-search.component';
+import { DetailedSearchComponent } from './components/Detailed-Search/detailed-search/detailed-search.component';
 import { FooterComponent } from './components/Layout/footer/footer.component';
 import { PreFooterComponent } from './components/Layout/pre-footer/pre-footer.component';
 import { SearchBarComponent } from './components/Home/search-bar/search-bar.component';
