@@ -1,67 +1,56 @@
+h3{
+  width: inherit;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
 .mono-range-slider {
-  position: relative;
-  width: 237px;
-  margin-right: 16px;
-  margin-top: -11px;
-
-
-  .simple {
-    -webkit-appearance: none;
-    outline: none;
+    position: relative;
     width: 237px;
-
-
-    &::-webkit-slider-runnable-track {
-      border-radius: 25px;
-      height: 10px;
-      background-color: #262D31;
-      -webkit-appearance: none;
-    }
-
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      z-index: 3;
-
-      margin-top: -5px !important;
-      width: 23px;
-      height: 23px;
-      background-color: #00ff00;
-      border-radius: 50%;
-      box-shadow: 0 0 0 0 rgba(0, 255, 00, .1);
-      transition: box-shadow .3s ease-in-out;
-
-      &:hover {
-        box-shadow: 0 0 0 20px rgba(0, 255, 0, .1);
-      }
-
-      &:active {
+    margin-top: -11px;
+    .simple {
+        -webkit-appearance: none;
         outline: none;
-        box-shadow: 0 0 0 40px rgba(0, 255, 0, .2);
-
-      }
-
-      &:focus {
-        outline: none;
-
-      }
+        width: 237px;
+        &::-webkit-slider-runnable-track {
+            border-radius: 25px;
+            height: 10px;
+            background-color: #262D31;
+            -webkit-appearance: none;
+        }
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            z-index: 3;
+            margin-top: -5px !important;
+            width: 23px;
+            height: 23px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(0, 255, 00, .1);
+            transition: box-shadow .3s ease-in-out;
+            &:hover {
+                box-shadow: 0 0 0 20px rgba(0, 255, 0, .1);
+            }
+            &:active {
+                outline: none;
+                box-shadow: 0 0 0 40px rgba(0, 255, 0, .2);
+            }
+            &:focus {
+                outline: none;
+            }
+        }
     }
-
-
-  }
-  p {
-    position: absolute;
-    top: 25px;
-  }
-  .range {
-
-    position: absolute;
-    left: 0;
-    top: 10px;
-
-    height: 10px;
-    bottom: 0;
-    border-radius: 5px;
-    right: 50%;
-    background-color: #40F600;
-  }
+    p {
+        position: absolute;
+        top: 35px;
+    }
+    .range {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        height: 10px;
+        bottom: 0;
+        border-radius: 5px;
+        right: 50%;
+        background-color: #40F600;
+    }
 }

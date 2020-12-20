@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from "@angular/common";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'vehiclos-navbar',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  get navButtons(): Button[] {
+    return this._navButtons;
+  }
 
-  navButtons: Button[] = [new Button('SEARCH', true, ''),new Button('SELL', false, 'sell'), new Button('ABOUT US', false, 'about-us'), new Button('WISHLIST', false, 'about-us')];
+  set navButtons(value: Button[]) {
+    this._navButtons = value;
+  }
+
+  get route(): string {
+    return this._route;
+  }
+
+  set route(value: string) {
+    this._route = value;
+  }
+
+  private _navButtons: Button[];
   private _isRegister: boolean;
   private _isLogin:boolean;
+  private _route: string;
 
   get isLogin(): boolean {
     return this._isLogin;
@@ -27,14 +45,25 @@ export class NavbarComponent implements OnInit {
     this._isRegister = value;
   }
 
-  constructor() { }
+  constructor(private location: Location, private router: Router) {
+  }
 
   ngOnInit(): void {
+    this.navButtons = [new Button('SEARCH', false, ''),new Button('SELL', false, 'sell'), new Button('ABOUT US', false, 'about-us'), new Button('WISHLIST', false, 'wishlist')];
+    if (!this.location.path()) {
+      this.navButtons[0].isActive = true;
+    } else {
+      this.navButtons.forEach(item => {
+        if(this.location.path() === '/'+item.link) {
+          item.isActive = true;
+        }
+      })
+    }
   }
 
 
   changePage(button: Button) {
-    for (const item of this.navButtons) {
+    for (const item of this._navButtons) {
       item.isActive = button === item;
     }
   }
@@ -79,6 +108,7 @@ class Button {
   }
 
   constructor(text: string, isActive: boolean, link: string) {
+
     this._text = text;
     this._isActive = isActive;
     this._link = link;

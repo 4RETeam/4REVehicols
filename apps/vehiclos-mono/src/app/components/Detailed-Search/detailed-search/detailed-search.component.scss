@@ -1,0 +1,44 @@
+@import "./../../../../styles";
+.big-heading {
+  margin: 71px 0;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  &:after{
+    bottom: -0.2em;
+    left: calc(50% - 166px);
+    width: 332px;
+    min-height: 3px;
+    position: absolute;
+    content: ' ';
+    background-color: $client-green;
+  }
+}
+.accordion{
+  font-family: 'Roboto', sans-serif;
+  width: 954px;
+  margin: auto;
+  .accordion-header{
+    padding: 5px 15px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #E7E6E9;;
+    span{
+      &:hover {
+        user-select: none;
+        cursor: pointer;
+      }
+    }
+  }
+  .accordion-content{
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    felx: 1 1 30;
+  }
+}

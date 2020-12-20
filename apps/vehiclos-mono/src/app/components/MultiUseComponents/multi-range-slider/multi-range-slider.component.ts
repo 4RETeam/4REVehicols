@@ -9,6 +9,7 @@ export class MultiRangeSliderComponent {
 
   @Input() public min: number;
   @Input() public max: number;
+  @Input() public name:string;
   leftClasses = [];
   rightClasses = [];
   leftValue = 20;
