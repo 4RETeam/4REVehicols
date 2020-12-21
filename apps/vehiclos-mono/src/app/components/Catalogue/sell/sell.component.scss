@@ -1,10 +1,18 @@
 
 @import "./../../../../styles";
+
+.Mcontainei{
+	position: relative;
+	height: 100%;
+}
+
 .main{
 	
 	margin-left: 330px;
 	display: flex;
 	flex-wrap: wrap;
+
+	font-family: $basic-fonts;
 	
 	width: 1590px;
 	height: 100%;
@@ -18,7 +26,6 @@
 
 		.car-name{
 			position: absolute;
-			font-family: Roboto;
 			font-style: normal;
 			font-weight: bold;
 			font-size: 18px;
@@ -43,7 +50,6 @@
 		}
 		.car-price{
 			position: absolute;
-			font-family: Roboto;
 			font-style: normal;
 			font-weight: bold;
 			font-size: 36px;
