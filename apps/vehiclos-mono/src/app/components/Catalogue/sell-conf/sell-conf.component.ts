@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellConfComponent implements OnInit {
 
+  a = [{route: 'example'}, {route: 'example'},{route: 'example'},{route: 'example'},];
+  b = [{name: 'example1'},{name: 'example2'},{name: 'example2'},];
   constructor() { }
 
   ngOnInit(): void {

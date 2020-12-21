@@ -2,7 +2,72 @@
 	position: absolute;
 	height: 100%;
 	width: 330px;
+	z-index: 1000000;
+	
 
 	background: #F9F9F9;
 	box-shadow: 9px 4px 18px rgba(0, 0, 0, 0.25);
+	span{
+		position: relative;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 48px;
+		text-align: center;
+		}
+	.right-arrow{
+		position: relative;
+		top:49px;
+		left:40px;
+		transform: rotate(180deg);
+		width: 19px;
+		height: 31px;
+	}
+	.selectors{
+		margin-top:51px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		*{
+			margin-top:2rem;
+		}
+	}	
+	.span1{
+		margin-top:17px;
+		text-align: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+		color: #797979
+	}
+	.span2{
+		margin-top:41px;
+		padding-left:30px;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;
+		color: #797979
+	}
+	h3{
+		margin-top:25px;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;	
+		text-align: center;
+		
+	}
+	.slider{
+		margin-top: 26px;
+		padding: 0 30px;
+	}
+	.checkboxs{
+		padding: 30px ;
+
+	}
 }
