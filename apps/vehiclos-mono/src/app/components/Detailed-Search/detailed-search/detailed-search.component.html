@@ -13,6 +13,49 @@
       <vehiclos-select ></vehiclos-select>
       <vehiclos-single-range-slider max="100" name="Location"></vehiclos-single-range-slider>
     </div>
-    <vehiclos-checkbox [checkboxes]="a"></vehiclos-checkbox>
+    <div class="block">
+      <div class="sub-block top-down">
+        <vehiclos-select ></vehiclos-select>
+        <vehiclos-select ></vehiclos-select>
+        <vehiclos-select ></vehiclos-select>
+      </div>
+      <div class="sub-block thing">
+        <h2>Millage</h2>
+        <div class="border">
+          <div class="radio-group">
+            <label>
+              <input type="radio">
+              Km
+            </label>
+            <label>
+              <input type="radio">
+              mi
+            </label>
+          </div>
+          <vehiclos-multi-range-slider min="0" max="100"></vehiclos-multi-range-slider>
+        </div>
+      </div>
+      <div class="sub-block thing">
+        <h2>Power</h2>
+        <div class="border">
+          <div class="radio-group">
+            <label>
+              <input type="radio">
+              Kw
+            </label>
+            <label>
+              <input type="radio">
+              HP
+            </label>
+          </div>
+          <vehiclos-multi-range-slider min="0" max="100"></vehiclos-multi-range-slider>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <vehiclos-checkbox [checkboxes]="a"></vehiclos-checkbox>
+      <vehiclos-checkbox [checkboxes]="a"></vehiclos-checkbox>
+      <vehiclos-checkbox [checkboxes]="a"></vehiclos-checkbox>
+    </div>
   </div>
 </div>
