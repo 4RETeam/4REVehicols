@@ -32,6 +32,8 @@ import { SelectComponent } from './components/MultiUseComponents/select/select.c
 import { SellComponent } from './components/Catalogue/sell/sell.component';
 import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.component';
 
+import { CheckboxComponent } from './components/MultiUseComponents/checkbox/checkbox.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +60,8 @@ import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.co
     SingleRangeSliderComponent,
     SelectComponent,
     SellComponent,
-    SellConfComponent
+    SellConfComponent,
+    CheckboxComponent,
   ],
   imports: [
     BrowserModule,
