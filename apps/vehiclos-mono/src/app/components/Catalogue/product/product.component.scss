@@ -1,0 +1,145 @@
+.main{
+	width: 100%;
+	height: 100%;
+	margin-left: 254px;
+	
+
+
+
+	.small-info{
+
+		.main-info{
+			h1{
+				font-family: Roboto;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 36px;
+				line-height: 42px;
+				margin-top: 77px;
+				margin-bottom: 57px;
+				margin-left: 130px;
+				span{
+					margin-left: 305px;
+					text-decoration:underline;
+				}
+			}
+		}
+		.right-arrow{
+			position: relative;
+			width: 21px;
+			height: 31px;
+			left: 42px;
+			top: 115px;
+			transform: rotate(-180deg);
+		}
+		.container{
+			display:flex;
+			flex-direction: row;
+		.wrapp{
+		
+		flex-direction: column;
+			.element-wrapper{
+			
+			button{
+				margin-bottom:18px;
+				width: 112px;
+				height: 92px;
+				border: none; 
+				border-radius: 10px;
+				overflow: hidden;
+				transition:  0.5s all ease;
+				&:focus{
+					outline: none;
+				}
+				&:hover{
+					transform:scale(1.2);
+					cursor: pointer;
+					transition: 0.3s all ease;
+				}
+				padding: 0;
+					.small-img{
+						
+						width: inherit;
+						height: inherit;
+						
+						
+					}
+				}
+				
+			}
+		}
+		.main-img-box{
+			margin-left:17px;
+			width: 657px;
+			height: 534px;
+			overflow: hidden;
+			border-radius: 40px;
+			.main-img{
+				width: 657px;
+				height: 534px;
+			}
+		}
+		.container-info{
+			flex-direction: column;
+			margin-left: 44px;
+			h1{
+				margin-bottom: 25px;
+			}
+			p{
+				width: 593px;
+				position: relative;
+				margin-bottom: 111px;
+			}
+			p::after{
+				content: " ";
+				position: absolute;
+				top: 142px;
+				right: 112px;
+				height: 2px;
+				width: 489px;
+				background-color:#262D31;
+			}
+			.icon-container{
+				display: inline-block;
+				width: 100%;
+				table{
+				max-width: 100%;
+					
+				tr{
+					border-spacing: 5px;
+					td{
+						width: 1%;
+						padding-bottom: 30px;
+						height: 20px;
+						vertical-align: middle;
+						
+						
+					}
+					.right{
+						position: relative;
+						right: 94px;
+					}
+					.rightT{
+						position: relative;
+						right: 175px;
+					}
+					.text{
+						position: relative;
+						right: 81px;
+					}
+				
+				}
+				.icon{
+					width: 26px;
+					height: 26px;
+				}
+				}
+			
+			}
+		}
+
+
+	}
+	}
+
+}

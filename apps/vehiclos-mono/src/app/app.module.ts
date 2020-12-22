@@ -16,7 +16,6 @@ import { HomeComponent } from './components/Home/home/home.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { ProductComponent } from './components/product/product.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { SearchBottomComponent } from './components/Home/search-bottom/search-bottom.component';
 import { SearchButtonComponent } from './components/Home/search-button/search-button.component';
@@ -27,12 +26,10 @@ import { LoginFormComponent } from './components/Layout/login-form/login-form.co
 import { MultiRangeSliderComponent } from './components/MultiUseComponents/multi-range-slider/multi-range-slider.component';
 import { SingleRangeSliderComponent } from './components/MultiUseComponents/single-range-slider/single-range-slider.component';
 import { SelectComponent } from './components/MultiUseComponents/select/select.component';
-
-
 import { SellComponent } from './components/Catalogue/sell/sell.component';
 import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.component';
-
 import { CheckboxComponent } from './components/MultiUseComponents/checkbox/checkbox.component'
+import { ProductComponent } from './components/Catalogue/product/product.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +45,6 @@ import { CheckboxComponent } from './components/MultiUseComponents/checkbox/chec
     HomeComponent,
     AboutUsComponent,
     WishlistComponent,
-    ProductComponent,
     BuyComponent,
     SearchBottomComponent,
     SearchButtonComponent,
@@ -62,6 +58,8 @@ import { CheckboxComponent } from './components/MultiUseComponents/checkbox/chec
     SellComponent,
     SellConfComponent,
     CheckboxComponent,
+    ProductComponent,
+  
   ],
   imports: [
     BrowserModule,

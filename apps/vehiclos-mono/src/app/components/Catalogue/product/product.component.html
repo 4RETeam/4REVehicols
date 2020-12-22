@@ -1,0 +1,56 @@
+<div class="main">
+	<div class="small-info">
+		<div class="main-info">
+			<img class='right-arrow' src="./../../../assets/svg/right-arrow.svg">
+			<h1>BMW 520 D<span>€ 2.980-</span></h1>
+
+		</div>
+
+		<div class="container">
+			<div class="wrapp">
+				<div class="element-wrapper" *ngFor="let item of datas">
+					<input type="text" #box value="{{item.id}}" class="kastil" style="display: none;">
+					<button class='small-img-box' (click)="newPhoto(box.value)"><img class='small-img'
+							src="{{item.img}}"></button>
+				</div>
+			</div>
+			<div class='main-img-box'><img class='main-img' src="{{main.img}}"></div>
+			<div class="container-info">
+				<h1>Descriprion</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Ut fermentum augue nec neque molestie dignissim. Quisque accumsan feugiat tincidunt.
+					Mauris rutrum dolor in ante aliquet, ac pharetra orci cursus. Donec semper dui accumsan
+					dolor lobortis, non lobortis nunc fermentum. Ut ut malesuada leo. Sed dictum varius neque
+					, tempor blandit libero pellentesque non. Sed in enim vel nulla malesuada sodales placerat
+					ac lacus. Nullam scelerisque vehicula hendrerit.</p>
+				<div class="icon-container">
+					<table >
+			
+						<tr>
+						  <td><img class='icon' src="./../../../assets/svg/road.svg"></td>
+						  <td class="text">200,000 km</td>
+						  <td class="right"><img class='icon' src="./../../../assets/svg/gas.svg"></td>
+						  <td class="rightT">Used/2 previous users</td>
+						</tr>
+						<tr>
+						  <td ><img class='icon' src="./../../../assets/svg/calendar.svg"></td>
+						  <td class="text">06/2009</td>
+						  <td class="right"> <img class='icon' src="./../../../assets/svg/gas.svg"></td>
+						  <td class=" rightT">Gasoline</td>
+						</tr>
+						<tr>
+						  <td><img class='icon' src="./../../../assets/svg/horse.svg"></td>
+						  <td class="text">100 kW 136 hp</td>
+						<td class="right">	<img class='icon' src="./../../../assets/svg/settings.svg"></td>
+						<td class="rightT">Manual</td>
+						</tr>
+					 </table>
+		
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
