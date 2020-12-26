@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -67,6 +68,10 @@ import { ProductComponent } from './components/Catalogue/product/product.compone
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyABlDG8p85EGBzobHUHFmc9QHuqgpo7Il0'
+    })
+
   
   ],
   providers: [],

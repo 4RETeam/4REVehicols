@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellComponent implements OnInit {
 
+
+
   AmericanMoney=[{
     id:1,
     curr:"USD",

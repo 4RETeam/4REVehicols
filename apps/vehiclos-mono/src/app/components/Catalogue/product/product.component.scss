@@ -1,8 +1,9 @@
+@import "./../../../../styles";
 .main{
 	width: 100%;
 	height: 100%;
 	margin-left: 254px;
-	
+	font-family: Roboto;
 
 
 
@@ -10,7 +11,7 @@
 
 		.main-info{
 			h1{
-				font-family: Roboto;
+				
 				font-style: normal;
 				font-weight: bold;
 				font-size: 36px;
@@ -141,5 +142,166 @@
 
 	}
 	}
+	.details-container{
+		display:flex;
+		flex-direction: column;
+		margin-left: 141px;
+		margin-top: 28px;
+		height: 1666px;
+		
 
+		.mini-navbar-container{
+			position: relative;
+			flex-direction: row;
+			h2{
+				display: inline-block;
+				margin-right: 54px;
+			}
+		}
+		.mini-navbar-container::after{
+			content: " ";
+			position: absolute;
+			top: 41px;
+			left: -8px;
+			height: 2px;
+			width: 621px;
+			background-color: #262D31;
+
+		}
+		.main-details{
+			margin-top:47px;
+			h1{
+				margin-bottom:14px;
+				font-size: 24px;
+				line-height: 28px;
+				
+			}
+			.state{
+				.elemment-details{
+					display:flex;
+					margin-left: 10px;
+					height: 296px;
+					width: 100%;
+					flex-direction: row;
+					.states{
+						width: 202px;
+						h2{
+							margin-bottom: 23px;
+						}
+						p{
+							margin-bottom: 13px;
+						}
+					}
+					.support-state{
+						margin-top: 40px;
+					}
+					.afters{
+						position: relative;
+					}
+					.afters::after{
+						content: " ";
+						position: absolute;
+						top: -48px;
+						left: 177px;
+						height: 328px;
+						min-width: 2px;
+						max-width:  2px;
+						background-color: #E7E6E9;
+					}
+
+				}
+			
+			}
+			
+		}
+		h1{
+			margin-top: 79px;
+			margin-bottom: 33px;
+			font-size: 24px;
+			line-height: 28px;
+		}
+		.container-Elementts{
+			margin-left: 10px;
+			height: 296px;
+			width: 100%;
+			-moz-column-width: 50px;
+			column-width: 420px;
+			-moz-column-gap: 0;
+			column-gap: 0;
+			-moz-column-fill: auto;
+			column-fill: auto;
+		
+			p{
+				font-size: 14px;
+				line-height: 16px;
+				display: block;
+				margin-bottom: 5px;
+				
+
+			}
+		}
+		.container-dealer{
+			display:flex;
+			flex-direction: row;
+			.form{
+				margin-right: 58px;
+				width: 392px;
+				.input{
+					width: 367px;
+					padding: 0 10px;
+					height: 42px;
+					margin-bottom: 24px;
+					background: #E7E6E9;
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+					border-radius: 25px;
+				}
+				.submit{
+					
+					padding: 0 10px;
+					height: 42px;
+					margin-bottom: 24px;
+					background: #E7E6E9;
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+					border-radius: 25px;
+				}
+			}
+			.info{
+
+				position: absolute;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 18px;
+				line-height: 21px;
+				top:10px;
+				padding: 5px 10px;
+				left:-10px;
+				width: 401px;
+				height: 42px;
+				box-shadow: 6px 9px 8px rgba(0, 0, 0, 0.25);
+				border-radius: 20px 0px 0px 0px;
+				background:$client-green;
+				z-index: 2;
+
+			}
+			.maps{
+				position: relative;
+				width: 668px;
+				height: 434px;
+				border-radius: 40px;
+				
+				.normal{
+					width: 668px;
+					height: 434px;
+					border-radius: 40px;
+					overflow: hidden;
+				agm-map{
+					width: 100%;
+					height: 100%;
+					border-radius: 40px;
+				}
+				}
+		}
+		}
+		
+	}
 }

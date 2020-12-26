@@ -10,6 +10,7 @@ import { Router} from "@angular/router";
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+
   route:string;
   hello$ = this.http.get<Message>('/api/hello');
   constructor(private http: HttpClient, private location: Location, private router: Router) {

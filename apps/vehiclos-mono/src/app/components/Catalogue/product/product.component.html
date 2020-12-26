@@ -41,7 +41,7 @@
 						<tr>
 						  <td><img class='icon' src="./../../../assets/svg/horse.svg"></td>
 						  <td class="text">100 kW 136 hp</td>
-						<td class="right">	<img class='icon' src="./../../../assets/svg/settings.svg"></td>
+						<td class="right"><img class='icon' src="./../../../assets/svg/settings.svg"></td>
 						<td class="rightT">Manual</td>
 						</tr>
 					 </table>
@@ -53,4 +53,80 @@
 
 	</div>
 
+	<div class="details-container">
+		<div class="mini-navbar-container">
+			<h2>Details</h2> 
+			<h2>Equipment</h2> 
+			<h2>Contact</h2>
+		</div>
+		
+		<div class="main-details">
+			<h1>Details</h1>
+			<div class="state">
+				
+				<div class="elemment-details">
+
+					<div class="first-state states">
+						<h2>State</h2>
+						<p class="rapper" *ngFor="let item of details">{{item.atr}} </p>
+					</div>
+					<div class="support-state states afters">
+
+						<p class="rapper" *ngFor="let item of details">{{item.atrInf}} </p>
+					</div>
+					<div class="second-state states">
+						<h2>State</h2>
+						<p class="rapper" *ngFor="let item of details">{{item.atr}} </p>
+					</div>
+					<div class="support-state states afters">
+
+						<p class="rapper" *ngFor="let item of details">{{item.atrInf}}  </p>
+					</div>
+					<div class="third-state states">
+						<h2>State</h2>
+						<p class="rapper" *ngFor="let item of details">{{item.atr}} </p>
+					</div>
+					<div class="support-state states">
+
+						<p class="rapper" *ngFor="let item of details">{{item.atrInf}}  </p>
+					</div>
+
+				</div>
+			</div>
+	
+		</div>
+
+		<h1>Equipment</h1>
+		<div class="container-Elementts">
+			
+			<p class="wrapper" *ngFor="let item of elements">{{item.Atr}}</p>
+	
+		</div>
+		<h1>Contact dealer</h1>
+		<div class="container-dealer">
+			
+			<div class="form">
+				<form>
+					<input type="text" class="input" placeholder="Name">
+					<input type="text" class="input" placeholder="E-mail">
+					<input type="text" class="input" placeholder="Subject">
+					<input type="submit"  class="submit" placeholder="Submit">
+
+				</form>
+
+
+			</div>
+			
+			<div class="maps">
+				<div class="info">{{position.name}}</div>
+				<div class=normal>
+				<agm-map [latitude]="position.lat" [longitude]="position.lng">
+					<agm-marker [latitude]="position.lat" [longitude]="position.lng"></agm-marker>
+			</agm-map>
+				</div>
+		</div>
+		</div>
+	</div>
+
+	
 </div>
