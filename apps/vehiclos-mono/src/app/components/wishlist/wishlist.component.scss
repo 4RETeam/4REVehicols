@@ -1,9 +1,16 @@
 
 
 .mainBlock{
-    position: relative;
+
+position: relative;
 height: 100%;
 width: 988px;
+.right-arrow{
+   position: relative;
+    height: 32px;
+    top: 50px;
+    left: 104px;
+}
 h1{
     position: relative;
     text-align: center;
@@ -23,6 +30,7 @@ h1{
 }
 
 
+
 &:before {
     content: '';
     position: absolute;
@@ -36,23 +44,93 @@ h1{
 }
 .element-wrapper{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction:row;
     height: 197px;
     position: relative;
     margin-left: calc(1rem + 72px);
     margin-bottom: 28px;
     .imges{
+        
         width: 242px;
         height: 197px;
         border-radius: 40px;
         overflow: hidden;
         
     img{
+        
         width: 242px;
         height: 197px;
 
 
     }
+    }
+    .details{
+        display: flex;
+        flex-direction:column;
+        h2{
+            margin-left: 34px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            .price{
+                margin-left: 256px;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    background: #00FF00;
+                    width: 75px;
+                    height: 2px;
+                    top: 31px;
+                    right: 218px;
+                
+                }
+            }
+
+            .close{
+                margin-left: 72px;
+                position: relative;
+                 height: 25px;
+                 top:10px;
+               
+             }
+        }
+
+        .elements{
+           
+            margin-top: 43px;
+            margin-left: 34px;
+            display: flex;
+            flex-direction:row;
+            .stick{
+                position: relative;
+                &:after {
+                    content: "";
+                position: absolute;
+                background: #000000;
+                width: 1px;
+                height:105px;
+                top: 0px;
+                right: 8px;
+                }
+            }
+            .block{
+                width: 180px;
+                p{
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 18px;
+                }
+                .icon{
+                  
+                    position: relative;
+                     height: 18px;
+                     top:5px;
+                   
+                 }
+
+            }
+        }
     }
     &:after{
         content: "";
@@ -64,6 +142,7 @@ h1{
         right: 10%;
     
     }
+
 
 }
 
