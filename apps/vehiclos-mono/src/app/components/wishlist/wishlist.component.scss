@@ -2,15 +2,27 @@
 
 .mainBlock{
 
-position: relative;
+position: absolute;
+top:0px;
+right:-100%;
+background-color: #f8f8f8;
+z-index: 3;
 height: 100%;
 width: 988px;
 .right-arrow{
    position: relative;
-    height: 32px;
+    height: 40px;
     top: 50px;
     left: 104px;
+    background-color: #f8f8f800;
+    border: none;
+    z-index: 3;
 }
+.right-arrows{
+
+     height: 32px;
+
+ }
 h1{
     position: relative;
     text-align: center;
@@ -36,7 +48,7 @@ h1{
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(100% + 28px);
+    height: calc(100% + 50px);
     width: 1rem;
     z-index: -1;
     margin: 0rem;

@@ -1,15 +1,15 @@
-<div class="mainBlock">
-<img class='right-arrow' src="./../../assets/svg/right-arrow.svg">
+<div class="mainBlock" style="{{style}}">
+<button (click)="styleChanger()" class='right-arrow'><img class='right-arrows' src="./../../assets/svg/right-arrow.svg"></button>
 <h1>Whishlist</h1>
-<div class="element-wrapper">
+<div class="element-wrapper" *ngFor="let item of wishes" >
     <div class="imges">
-        <img class='small-img'src="{{img}}">
+        <img class='small-img'src="{{item.img}}">
     </div>
     <div class="details">
         <h2>
-            BMW X1
+			{{item.name}}
             <span class="price">
-                € 20,234.
+                € {{item.price}}
             </span>
             <img class='close' src="./../../assets/svg/closeBtn.svg">
         </h2>
@@ -17,43 +17,43 @@
         <div class="block stick">
            <p> 
             <img class='icon' src="./../../assets/svg/road.svg">
-            46,542 km
+            {{item.mileage}} km
            </p>
            <p> 
             <img class='icon' src="./../../assets/svg/user.svg">
-            Used
+            {{item.used}}
            </p>
            <p> 
             <img class='icon' src="./../../assets/svg/gas.svg">
-            Gasoline
+            {{item.oil}}
            </p>
         </div>
         <div class="block stick">
             <p> 
             <img class='icon' src="./../../assets/svg/calendar.svg">
-            02/2016
+            {{item.date}}
             </p>
             <p> 
             <img class='icon' src="./../../assets/svg/user.svg">
-            1 previous owner
+            {{item.howMuchUsers}}
             </p>
             <p> 
             <img class='icon' src="./../../assets/svg/rainDrop.svg">
-            5.1 l/100 km (comb) 1
+            {{item.howMuchFood}}
             </p>
         </div>
         <div class="block">
             <p> 
              <img class='icon' src="./../../assets/svg/horse.svg">
-             100 kW 136 hp
+             {{item.horsePower}}
             </p>
             <p> 
             <img class='icon' src="./../../assets/svg/settings.svg">
-            Manual
+            {{item.transmission}}
             </p>
             <p> 
             <img class='icon' src="./../../assets/svg/Co2.svg">
-            100 g CO2/km (comb) 2
+            {{item.polution}}
             </p>   
         </div>
     </div>
