@@ -1,0 +1,161 @@
+
+
+.mainBlock{
+
+position: absolute;
+top:0px;
+right:-100%;
+background-color: #f8f8f8;
+z-index: 3;
+height: 100%;
+width: 988px;
+.right-arrow{
+   position: relative;
+    height: 40px;
+    top: 50px;
+    left: 104px;
+    background-color: #f8f8f800;
+    border: none;
+    z-index: 3;
+}
+.right-arrows{
+
+     height: 32px;
+
+ }
+h1{
+    position: relative;
+    text-align: center;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 50px;
+&:after{
+    content: "";
+    position: absolute;
+    background: #00FF00;
+    width: 324px;
+    height: 2px;
+    top: 68px;
+    right: 33%;
+
+}
+}
+
+
+
+&:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% + 50px);
+    width: 1rem;
+    z-index: -1;
+    margin: 0rem;
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(22, 166, 131, 0) 0.01%, #00FF00 100%);
+}
+.element-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    height: 197px;
+    position: relative;
+    margin-left: calc(1rem + 72px);
+    margin-bottom: 28px;
+    .imges{
+        
+        width: 242px;
+        height: 197px;
+        border-radius: 40px;
+        overflow: hidden;
+        
+    img{
+        
+        width: 242px;
+        height: 197px;
+
+
+    }
+    }
+    .details{
+        display: flex;
+        flex-direction:column;
+        h2{
+            margin-left: 34px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            .price{
+                margin-left: 256px;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    background: #00FF00;
+                    width: 75px;
+                    height: 2px;
+                    top: 31px;
+                    right: 218px;
+                
+                }
+            }
+
+            .close{
+                margin-left: 72px;
+                position: relative;
+                 height: 25px;
+                 top:10px;
+               
+             }
+        }
+
+        .elements{
+           
+            margin-top: 43px;
+            margin-left: 34px;
+            display: flex;
+            flex-direction:row;
+            .stick{
+                position: relative;
+                &:after {
+                    content: "";
+                position: absolute;
+                background: #000000;
+                width: 1px;
+                height:105px;
+                top: 0px;
+                right: 8px;
+                }
+            }
+            .block{
+                width: 180px;
+                p{
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 18px;
+                }
+                .icon{
+                  
+                    position: relative;
+                     height: 18px;
+                     top:5px;
+                   
+                 }
+
+            }
+        }
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        background: #000000;
+        width: 810px;
+        height: 2px;
+         top: 211px;
+        right: 10%;
+    
+    }
+
+
+}
+
+}

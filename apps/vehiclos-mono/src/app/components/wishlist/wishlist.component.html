@@ -1,1 +1,66 @@
-<p>wishlist works!</p>
+<div class="mainBlock" style="{{style}}">
+<button (click)="styleChanger()" class='right-arrow'><img class='right-arrows' src="./../../assets/svg/right-arrow.svg"></button>
+<h1>Whishlist</h1>
+<div class="element-wrapper" *ngFor="let item of wishes" >
+    <div class="imges">
+        <img class='small-img'src="{{item.img}}">
+    </div>
+    <div class="details">
+        <h2>
+			{{item.name}}
+            <span class="price">
+                € {{item.price}}
+            </span>
+            <img class='close' src="./../../assets/svg/closeBtn.svg">
+        </h2>
+        <div class="elements">
+        <div class="block stick">
+           <p> 
+            <img class='icon' src="./../../assets/svg/road.svg">
+            {{item.mileage}} km
+           </p>
+           <p> 
+            <img class='icon' src="./../../assets/svg/user.svg">
+            {{item.used}}
+           </p>
+           <p> 
+            <img class='icon' src="./../../assets/svg/gas.svg">
+            {{item.oil}}
+           </p>
+        </div>
+        <div class="block stick">
+            <p> 
+            <img class='icon' src="./../../assets/svg/calendar.svg">
+            {{item.date}}
+            </p>
+            <p> 
+            <img class='icon' src="./../../assets/svg/user.svg">
+            {{item.howMuchUsers}}
+            </p>
+            <p> 
+            <img class='icon' src="./../../assets/svg/rainDrop.svg">
+            {{item.howMuchFood}}
+            </p>
+        </div>
+        <div class="block">
+            <p> 
+             <img class='icon' src="./../../assets/svg/horse.svg">
+             {{item.horsePower}}
+            </p>
+            <p> 
+            <img class='icon' src="./../../assets/svg/settings.svg">
+            {{item.transmission}}
+            </p>
+            <p> 
+            <img class='icon' src="./../../assets/svg/Co2.svg">
+            {{item.polution}}
+            </p>   
+        </div>
+    </div>
+
+
+    </div>
+
+</div>
+
+</div>

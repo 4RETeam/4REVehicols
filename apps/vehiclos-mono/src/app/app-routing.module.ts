@@ -6,6 +6,8 @@ import {AboutUsComponent} from "./components/about-us/about-us.component";
 import { SellComponent } from './components/Catalogue/sell/sell.component';
 import {DetailedSearchComponent} from "./components/Detailed-Search/detailed-search/detailed-search.component";
 import { ProductComponent } from './components/Catalogue/product/product.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { UserComponent } from './components/user/user.component';
 
 
 const routes: Routes = [
@@ -15,6 +17,7 @@ const routes: Routes = [
   {path: 'about-us', component: AboutUsComponent},
   {path: 'detailed-search', component: DetailedSearchComponent},
   {path: 'vehiclos-product', component:ProductComponent},
+  {path: 'vehiclos-wishlist', component:UserComponent},
 ];
 
 @NgModule({
