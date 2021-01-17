@@ -1,4 +1,5 @@
 @import "apps/vehiclos-mono/src/styles";
+@media only screen and (min-width: 600px) {
 .pre-footer {
     font-family: $basic-fonts;
     height: 294px;
@@ -64,5 +65,13 @@
                 font-weight: 500;
             }
         }
+    }
+}
+}
+@media only screen and (max-width: 600px) {
+    
+    .pre-footer{
+        display: none;
+       
     }
 }

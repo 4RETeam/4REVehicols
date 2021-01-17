@@ -8,6 +8,18 @@ import {Router} from "@angular/router";
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  meh="display: none;";
+  ceh="";
+  NavBarVis(){
+    if(this.meh=="display: none;"){
+      this.meh = " ";
+      this.ceh="display: none;";
+    }else{
+      this.meh ="display: none;";
+      this.ceh="";
+    }
+  }
+
   get navButtons(): Button[] {
     return this._navButtons;
   }

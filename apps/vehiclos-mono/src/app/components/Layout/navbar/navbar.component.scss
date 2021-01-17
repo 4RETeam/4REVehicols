@@ -1,10 +1,18 @@
 @import "apps/vehiclos-mono/src/styles";
+@media only screen and (min-width: 600px) {
 .nav-bar-full {
+    .iconss{
+        display: none;
+    }
+    .iconsss{
+        display: none;
+    }
     position: relative;
     height: 101px;
     padding: $standard-space 0;
     background-color: $non-white;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     .logo {
         height: 90%;
@@ -21,7 +29,13 @@
             font-family: "Roboto-Bold", sans-serif;
         }
     }
+    .nav-bar-content{
+       
+        display: flex !important;
+    flex-direction: row;
+    
     .center {
+        
         height: 90%;
         display: flex;
         align-items: center;
@@ -32,6 +46,7 @@
             justify-content: space-around;
             flex-direction: row;
             .nav-list-item {
+                
                 margin: 0 $standard-space*2;
                 width: 150px;
                 .nav-link {
@@ -67,12 +82,18 @@
         }
     }
     .right {
+        
         height: 90%;
         display: flex;
         align-items: center;
         justify-content: center;
+        
+        flex-direction: row;
+        
         .user-control {
             position: relative;
+            display: flex; 
+            flex-direction: row;
             font-family: 'Roboto', sans-serif;
             margin: 0 $standard-space*3;
             .icon {
@@ -154,4 +175,123 @@
             }
         }
     }
+}
+}
+}
+@media only screen and (max-width: 600px) {
+
+.nav-bar-full{
+    position: absolute;
+    z-index: 3;
+    width: 80%;
+    height: 100%;
+    
+    .logo{
+        z-index: 4;
+        position: fixed;    
+        width: 100%;
+        background: #F9F9F9;
+        box-shadow: 9px 4px 18px rgba(0, 0, 0, 0.25);
+        padding: 24px 0px;
+        h1{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            display: inline;
+            margin-left: 42px;
+            font-size: 36px;
+        }
+        .iconsss{
+            position: absolute;
+            right: 10%;
+            height: 40px;
+            border: none;
+            background: #F9F9F9;
+            
+        }
+      
+    }
+    .nav-bar-content{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: #F9F9F9;
+        top: 86px;
+        left:33px;
+        padding-top: 50px;
+        padding-left: 52px;
+        .center{
+           .nav-list-item{
+               margin-bottom: 37px;
+           }
+           &:after{
+            content: "";
+            position: absolute;
+            background: #B4B1B1;
+            width: 90%;
+            height: 2px;
+            top: 266px;
+            right: 5%;
+        
+        }
+        }
+        .right{
+            margin-top: 90px;
+            .user-control{
+                position: absolute;
+                display: flex; 
+                flex-direction: row-reverse;
+                .nav-btn{ 
+                font-size: 18px;
+                line-height: 21px;
+                }
+                .icon{
+                    margin-right: 28px;
+                    height: 25px;
+                }
+                span{
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 21px;
+                    /* identical to box height */
+
+                    text-align: center;
+                    text-transform: capitalize;
+
+                    color: #262D31;
+                }
+                button{
+                    border: none;
+                    background-color: #F9F9F9;
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 21px;
+                    /* identical to box height */
+
+                    text-align: center;
+                    text-transform: capitalize;
+
+                    color: #262D31;
+                }
+            }
+            .lang-menu{
+                .dropdown{
+                    position: absolute;
+                    top: 52px;
+                    right: 107px;
+                
+                }
+            }
+           
+          
+        }
+    }
+
+}
+
 }

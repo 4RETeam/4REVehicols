@@ -1,3 +1,4 @@
+@media only screen and (min-width: 600px) {
 .footer {
   margin-top: 33px;
   display: flex;
@@ -9,4 +10,10 @@
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
   }
+}
+}
+@media only screen and (max-width: 600px) {
+.footer{
+  display:none;
+}
 }

@@ -1,7 +1,15 @@
 <div class="Mcontainei">
-	<vehiclos-sell-conf></vehiclos-sell-conf>
+	<div class="nav">
+		<vehiclos-navbar></vehiclos-navbar>
+	</div>
+	
+	<vehiclos-sell-conf (StyleChangers)="StyleChangers($event)" [style]="style" ></vehiclos-sell-conf>
 	<div class='main'>
-		<div class="element-wrapper" *ngFor="let item of data" >
+		<button (click)="StyleChangers(true)" class='butt comp' >
+		<img class='comp'src="./../../../assets/svg/filter.svg">
+		</button>
+			<div class="element-wrapper" *ngFor="let item of data" >
+		
 			<a>
 				<div class='car-name'>{{item.car}}</div>
 				<img src="{{item.img}}">
