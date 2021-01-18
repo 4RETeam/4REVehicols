@@ -1,3 +1,5 @@
+
+@media only screen and (min-width: 600px) {
 .headings {
   display: flex;
   justify-content: space-around;
@@ -16,10 +18,48 @@
 }
 
 .sliders {
+  align-items: center;
   margin-bottom: 93px;
   display: flex;
   justify-content: center;
   *{
     margin: 0 36px;
   }
+}
+}
+@media only screen and (max-width: 600px) {
+  .headings {
+    display: flex;
+   
+ 
+    width: 100%;
+    margin: 0 5%;
+  
+    * {
+      margin: 0 0 26px 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+    }
+  
+    .price {
+      margin-left: 30px;
+    }
+  }
+  
+  .sliders {
+    margin-top: 36px;
+    .mehnich{
+      margin: auto;
+      margin-top:20px;
+    }
+    margin-bottom: 93px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    *{
+      margin: 0 5%;
+      
+    }
+  }
+
 }
