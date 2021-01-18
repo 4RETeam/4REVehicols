@@ -8,9 +8,10 @@
         flex-direction: row;
         justify-content: space-evenly;
         position: relative;
+        flex-wrap: wrap;
         background-color: $non-white;
-        height: 107px;
-        max-width: 1550px;
+        min-height: 107px;
+        max-width: 90%;
         margin: 35px auto;
         .category {
             transition: .5s all ease;
