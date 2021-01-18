@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
   }
 
   calculateStyle(): string {
-    return this.isVisible ? 'right: 0' : 'right: -100%;';
+    return this.isVisible ? 'right: 0' : 'right: calc(-100% - 150px);';
   }
 
   ngOnInit(): void {

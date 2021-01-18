@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   calculateStyle() {
-    return this.isVisible ? 'right: 0' : 'right: -100%;';
+    return this.isVisible ? 'right: 0' : 'right: calc(-100% - 150px);';
   }
 
   calculateShadeStyle(): string {
