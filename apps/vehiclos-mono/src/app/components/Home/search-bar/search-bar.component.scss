@@ -1,5 +1,5 @@
 @import "apps/vehiclos-mono/src/styles";
-
+@media only screen and (min-width: 600px) {
 .search-bar {
   user-select: none;
   flex: 0 0 100%;
@@ -49,4 +49,63 @@
       filter: drop-shadow(0px 1px 7px #17E2B1);
     }
   }
+}
+}
+@media only screen and (max-width: 600px) {
+  .search-bar {
+    border-radius: 20px;
+    user-select: none;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: $non-white;
+    height: 434px;
+    max-width: 300px;
+    margin: 35px auto;
+    .category {
+      width: 100px;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      &:hover{
+        cursor: pointer;
+      }
+      img {
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+  
+    .active {
+      user-select: none;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      background: #262D31;
+      box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+      border-radius: 25px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.2s;
+      img {
+  
+        user-select: none;
+        pointer-events: none;
+        filter: drop-shadow(0px 1px 7px #17E2B1);
+      }
+    }
+  }
+
+
+
+
 }
