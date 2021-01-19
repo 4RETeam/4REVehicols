@@ -1,6 +1,11 @@
-<div class= 'main'>
-	<img class='right-arrow'src="./../../../assets/svg/right-arrow.svg">
-	<span><h1>LOGO</h1></span>
+<div class= 'main' style="{{style}}">
+	
+	<img class='right-arrow mobile'src="./../../../assets/svg/right-arrow.svg">
+
+	<span><h1 class="mobile">LOGO</h1></span>
+	<Button (click)="styleChanger()" class=' comp'>
+	<img class='right-arrow comp'src="./../../../assets/svg/filter.svg">
+	</Button>
 	<div class="selectors">
 		<vehiclos-select [options]="a"></vehiclos-select>
 		<vehiclos-select [options]="a"></vehiclos-select>

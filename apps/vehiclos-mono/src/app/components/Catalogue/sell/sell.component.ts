@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'vehiclos-sell',
@@ -6,8 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sell.component.scss']
 })
 export class SellComponent implements OnInit {
+  style:string;
+  visible=true;
+ 
+  StyleChangers(ss){
+   
+    if(ss==true){
+      this.style='left:0%;';
+    }else{
+      this.style='left:-100%';
+    }
+  }
+ 
 
-
+ 
 
   AmericanMoney=[{
     id:1,
@@ -116,7 +128,7 @@ export class SellComponent implements OnInit {
 
   constructor() { 
     this.GetMoney(2);
-
+   
   }
 
   ngOnInit(): void {

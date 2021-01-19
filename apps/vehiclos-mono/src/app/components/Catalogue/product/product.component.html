@@ -1,12 +1,14 @@
 <div class="main">
+	<div class="border mob"></div>
 	<div class="small-info">
 		<div class="main-info">
 			<img class='right-arrow' src="./../../../assets/svg/right-arrow.svg">
-			<h1>BMW 520 D<span>€ 2.980-</span></h1>
-
+			<h1>BMW 520 D   <span class="comp">€ 2.980-</span></h1>
+			<h2 class="mob">€ 2.980-</h2>
 		</div>
 
 		<div class="container">
+			<div class='main-img-box mob'><img class='main-img' src="{{main.img}}"></div>
 			<div class="wrapp">
 				<div class="element-wrapper" *ngFor="let item of datas">
 					<input type="text" #box value="{{item.id}}" class="kastil" style="display: none;">
@@ -14,15 +16,19 @@
 							src="{{item.img}}"></button>
 				</div>
 			</div>
-			<div class='main-img-box'><img class='main-img' src="{{main.img}}"></div>
+			<div class='main-img-box comp'><img class='main-img' src="{{main.img}}"></div>
+			
 			<div class="container-info">
-				<h1>Descriprion</h1>
+				
+				<div class="nervSmile">
+				<h1 class="comp">Descriprion</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					Ut fermentum augue nec neque molestie dignissim. Quisque accumsan feugiat tincidunt.
 					Mauris rutrum dolor in ante aliquet, ac pharetra orci cursus. Donec semper dui accumsan
 					dolor lobortis, non lobortis nunc fermentum. Ut ut malesuada leo. Sed dictum varius neque
 					, tempor blandit libero pellentesque non. Sed in enim vel nulla malesuada sodales placerat
 					ac lacus. Nullam scelerisque vehicula hendrerit.</p>
+				</div>
 				<div class="icon-container">
 					<table >
 			
@@ -45,16 +51,18 @@
 						<td class="rightT">Manual</td>
 						</tr>
 					 </table>
+					 <h1 class="mob">Descriprion</h1>
 		
 				</div>
 
 			</div>
+		
 		</div>
 
 	</div>
 
 	<div class="details-container">
-		<div class="mini-navbar-container">
+		<div class="mini-navbar-container comp">
 			<h2>Details</h2> 
 			<h2>Equipment</h2> 
 			<h2>Contact</h2>
@@ -102,7 +110,7 @@
 			<p class="wrapper" *ngFor="let item of elements">{{item.Atr}}</p>
 	
 		</div>
-		<h1>Contact dealer</h1>
+		<h1 >Contact dealer</h1>
 		<div class="container-dealer">
 			
 			<div class="form">
@@ -128,5 +136,5 @@
 		</div>
 	</div>
 
-	
+
 </div>

@@ -1,12 +1,18 @@
 <div class="mainBlock" style="{{style}}">
-<button (click)="styleChanger()" class='right-arrow'><img class='right-arrows' src="./../../assets/svg/right-arrow.svg"></button>
-<h1>Whishlist</h1>
+<button (click)="styleChanger()" class='right-arrow comp'><img class='right-arrows' src="./../../assets/svg/right-arrow.svg"></button>
+<h1 class="comp">Whishlist</h1>
 <div class="element-wrapper" *ngFor="let item of wishes" >
-    <div class="imges">
+    <h2 class="name mob">
+        {{item.name}}
+        <img class='close' src="./../../assets/svg/closeBtn.svg">
+    </h2>
+    <h2 class="price mob"> € {{item.price}}</h2>
+
+    <div class="imges comp">
         <img class='small-img'src="{{item.img}}">
     </div>
     <div class="details">
-        <h2>
+        <h2 class="comp">
 			{{item.name}}
             <span class="price">
                 € {{item.price}}
@@ -14,7 +20,10 @@
             <img class='close' src="./../../assets/svg/closeBtn.svg">
         </h2>
         <div class="elements">
-        <div class="block stick">
+            <div class="imges mob">
+                <img class='small-img'src="{{item.img}}">
+            </div>
+        <div class="block stick ss bb">
            <p> 
             <img class='icon' src="./../../assets/svg/road.svg">
             {{item.mileage}} km
@@ -28,7 +37,7 @@
             {{item.oil}}
            </p>
         </div>
-        <div class="block stick">
+        <div class="block sticks ">
             <p> 
             <img class='icon' src="./../../assets/svg/calendar.svg">
             {{item.date}}
@@ -42,7 +51,7 @@
             {{item.howMuchFood}}
             </p>
         </div>
-        <div class="block">
+        <div class="block bb aa">
             <p> 
              <img class='icon' src="./../../assets/svg/horse.svg">
              {{item.horsePower}}

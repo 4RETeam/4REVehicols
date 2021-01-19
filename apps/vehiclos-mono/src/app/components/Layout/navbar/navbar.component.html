@@ -1,7 +1,12 @@
 <div class="nav-bar-full">
     <div class="logo">
       <a routerLink=""><h1>LOGO</h1></a>
+      <button class="iconsss" (click)="NavBarVis()">
+        <img class="iconss" src="../../../../assets/svg/burger.svg" style="{{ceh}}"/>
+      <img class="iconss" src="../../../../assets/svg/closeBtn.svg" style="{{meh}}"/>
+    </button>
     </div>
+    <div class="nav-bar-content" style="{{meh}}">
     <div class="center">
         <ul class="nav-list">
             <li class="nav-list-item {{button.calculateClass()}}" *ngFor="let button of navButtons"><a (click)="changePage(button)" class="nav-link {{button.calculateLinkClass()}}" routerLink="{{button.link}}">{{button.text}}</a></li>
@@ -10,6 +15,7 @@
 
     <div class="right">
         <div class="user-control">
+            <div>
             <button (click)="switchRegister()" class="nav-btn">
       Register
       </button>
@@ -17,8 +23,10 @@
             <button (click)="switchLogin()"class="nav-btn">
       Login
       </button>
-            <img class="icon" src="../../../../assets/svg/user.svg" />
-
+            </div>
+            <div>
+                <img class="icon" src="../../../../assets/svg/user.svg" />
+            </div>
             <button style="display: none">me</button>
         </div>
         <div class="lang-menu">
@@ -30,6 +38,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </div>
 <vehiclos-login (visibleSwitch)="switchLogin($event)" [isVisible]="isLogin" ></vehiclos-login>
