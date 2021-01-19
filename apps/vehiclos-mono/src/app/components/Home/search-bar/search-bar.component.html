@@ -1,7 +1,7 @@
-<div class="search-bar">
+<div class="search-bar" (window:resize)="onResize($event)" >
+  <div id="active-thing" class="active"> <img src="../../../../assets/svg/active/{{activeItem}}_active.svg" alt=""></div>
   <div (click)="moveActive($event, $event.target)" id="car" class="category"> <img src="../../../../assets/svg/car.svg" alt="">  </div>
   <div (click)="moveActive($event, $event.target)" id="bicycle" class="category"> <img src="../../../../assets/svg/bicycle.svg" alt=""> </div>
-  <div id="active-thing" class="active"> <img src="../../../../assets/svg/active/{{activeItem}}_active.svg" alt=""></div>
   <div (click)="moveActive($event, $event.target)" id="bike" class="category"> <img src="../../../../assets/svg/bike.svg" alt=""> </div>
   <div (click)="moveActive($event, $event.target)" id="minibus" class="category"><img src="../../../../assets/svg/minibus.svg" alt=""></div>
   <div (click)="moveActive($event, $event.target)" id="caravan" class="category"><img src="../../../../assets/svg/caravan.svg" alt=""> </div>
