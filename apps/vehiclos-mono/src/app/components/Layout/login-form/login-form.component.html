@@ -1,4 +1,4 @@
-<form class="form-wrapper">
+<form (submit)='call()' class="form-wrapper">
     <div class="form-group">
         <input required email ngModel #email='ngModel' (change)="log(email)" id="email" name="email" type="email" placeholder="Email">
         <div *ngIf="email.touched && !email.valid"> <span *ngIf="email.errors.email">Email neprevilinij</span></div>
@@ -8,7 +8,7 @@
     </div>
     <div class="form-group additional">
         <a href="#">Forget password?</a>
-        <button>Login</button>
+        <input type='submit' value='login'>
     </div>
 
     <div class="signUP">Don’t have an account? <a href="#">sign up</a></div>

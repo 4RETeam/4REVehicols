@@ -31,6 +31,7 @@ import { SellComponent } from './components/Catalogue/sell/sell.component';
 import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.component';
 import { CheckboxComponent } from './components/MultiUseComponents/checkbox/checkbox.component'
 import { ProductComponent } from './components/Catalogue/product/product.component';
+import { HelloService } from './_services/HelloService';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,7 @@ import { ProductComponent } from './components/Catalogue/product/product.compone
 
   
   ],
-  providers: [],
+  providers: [HelloService],
   bootstrap: [AppComponent],
 
 })

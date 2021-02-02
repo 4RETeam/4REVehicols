@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, NgModel, ValidatorFn, Validators} from "@angular/forms";
+import { UserService } from '../../../_services/HelloService';
 
 @Component({
   selector: 'vehiclos-register-form',
@@ -9,9 +10,12 @@ import {AbstractControl, FormControl, FormGroup, NgModel, ValidatorFn, Validator
 export class RegisterFormComponent implements OnInit {
 
 
+  constructor(private readonly userService:UserService) { }
 
-  constructor(
-  ) { }
+  email = '';
+  pass = '';
+  name = '';
+
 
   ngOnInit(): void {
   }
@@ -19,5 +23,26 @@ export class RegisterFormComponent implements OnInit {
   log(x: NgModel) {
     console.log(x);
   }
+
+  setEmail(email:NgModel) {
+    console.log(email);
+    this.email = email.value;
+  }
+
+  setPass(pass: NgModel) {
+    console.log(pass);
+    this.pass = pass.value;
+  }
+
+  setName(name:NgModel) {
+    console.log(name);
+    this.name = name.value;
+  }
+
+  call(){
+    console.log("asdfa",this.email,this.pass,this.name);
+    console.log(this.userService.register(this.email,this.pass,this.name));
+  }
+
 
 }
