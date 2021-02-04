@@ -1,14 +1,14 @@
-<form class="form-wrapper">
+<form (submit)='call()' class="form-wrapper">
     <div class="form-group">
-        <input required email ngModel #email='ngModel' (change)="log(email)" id="email" name="email" type="email" placeholder="Email">
+        <input required email ngModel #email='ngModel' (change)="setEmail(email)" id="email" name="email" type="email" placeholder="Email">
         <div *ngIf="email.touched && !email.valid"> <span *ngIf="email.errors.email">Email neprevilinij</span></div>
     </div>
     <div class="form-group">
-        <input required min="3" ngModel #name='ngModel' (change)="log(name)" id="name" name="name" type="text" placeholder="Name">
+        <input required min="3" ngModel #name='ngModel' (change)="setName(name)" id="name" name="name" type="text" placeholder="Name">
     </div>
     <div class="form-group">
 
-        <input required min="3" ngModel #pass='ngModel' (change)="log(pass)" id="pass" name="pass" type="password" placeholder="Password">
+        <input required min="3" ngModel #pass='ngModel' (change)="setPass(pass)" id="pass" name="pass" type="password" placeholder="Password">
         <input required min="3" ngModel #passConf='ngModel' (change)="log(passConf)" id="passConf" name="passConf" type="password" placeholder="Confirm Password">
     </div>
     <div class="form-group additional">

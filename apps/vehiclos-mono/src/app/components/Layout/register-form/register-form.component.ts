@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, NgModel, ValidatorFn, Validators} from "@angular/forms";
 import { UserService } from '../../../_services/HelloService';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'vehiclos-register-form',
@@ -41,7 +43,7 @@ export class RegisterFormComponent implements OnInit {
 
   call(){
     console.log("asdfa",this.email,this.pass,this.name);
-    console.log(this.userService.register(this.email,this.pass,this.name));
+    this.userService.register(this.email,this.pass,this.name).subscribe(e => {console.warn(e)});
   }
 
 

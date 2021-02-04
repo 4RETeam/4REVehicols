@@ -12,15 +12,15 @@ import { Router} from "@angular/router";
 export class AppComponent {
 
   route:string;
-  hello$ = this.http.get<Message>('/api/hello');
+  // hello$ = this.http.get<Message>('/api/hello');
   
   constructor(private http: HttpClient, private location: Location, private router: Router) {
-    router.events.subscribe(val => {
-      if (location.path() !== "") {
-        this.route = location.path();
-      } else {
-        this.route = "";
-      }
-    });
+    // router.events.subscribe(val => {
+    //   if (location.path() !== "") {
+    //     this.route = location.path();
+    //   } else {
+    //     this.route = "";
+    //   }
+    // });
   }
 }
