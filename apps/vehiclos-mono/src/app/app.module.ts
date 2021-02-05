@@ -32,6 +32,7 @@ import { SellConfComponent } from './components/Catalogue/sell-conf/sell-conf.co
 import { CheckboxComponent } from './components/MultiUseComponents/checkbox/checkbox.component'
 import { ProductComponent } from './components/Catalogue/product/product.component';
 import { UserService } from './_services/HelloService';
+import { PopupAlertComponent } from './components/MultiUseComponents/popup-alert/popup-alert.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { UserService } from './_services/HelloService';
     SellConfComponent,
     CheckboxComponent,
     ProductComponent,
+    PopupAlertComponent,
   
   ],
   imports: [

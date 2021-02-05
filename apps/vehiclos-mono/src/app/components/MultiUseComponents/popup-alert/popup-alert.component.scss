@@ -1,0 +1,30 @@
+.popup-wraper{
+  text-align: center;
+  border: 3px dashed;
+  border-radius: 15px;
+  padding: 0.5em;
+ p{ text-transform: uppercase;
+  font-weight: 600;
+}
+}
+
+.WARNING{
+  background-color: rgba(255, 232, 128, 0.5);
+  border-color: rgb(255, 215, 37);
+  p{
+    color: rgb(104, 99, 30);
+  }
+}
+.DANGER{
+
+}
+.GOOD{
+  background-color: rgba(0, 255, 0, 0.2);
+  border-color: rgb(0, 255, 0);
+  p{
+    color: rgb(39, 104, 30);
+  }
+}
+.INFO{
+
+}

@@ -16,8 +16,19 @@ export class RegisterFormComponent implements OnInit {
 
   email = '';
   pass = '';
+  passConf = '';
   name = '';
 
+  passwordsAreDifferent = false;
+
+  emailIncorrect = false;
+
+  passwordTooWeak = false;
+
+  userExists = false;
+  successfulReg = false;
+
+  regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
 
   ngOnInit(): void {
   }
@@ -29,11 +40,13 @@ export class RegisterFormComponent implements OnInit {
   setEmail(email:NgModel) {
     console.log(email);
     this.email = email.value;
+    this.emailIncorrect = !!!email.errors.email;
   }
 
   setPass(pass: NgModel) {
     console.log(pass);
     this.pass = pass.value;
+    this.passwordTooWeak = !this.regex.test(this.pass);
   }
 
   setName(name:NgModel) {
@@ -41,9 +54,15 @@ export class RegisterFormComponent implements OnInit {
     this.name = name.value;
   }
 
+  setPassConf(passConf:NgModel) {
+    this.passConf = passConf.value;
+    this.passConf !== this.pass ? this.passwordsAreDifferent = true : this.passwordsAreDifferent = false;
+  }
+
   call(){
+
     console.log("asdfa",this.email,this.pass,this.name);
-    this.userService.register(this.email,this.pass,this.name).subscribe(e => {console.warn(e)});
+    this.userService.register(this.email,this.pass,this.name).subscribe(data => {this.successfulReg = true;},err => {this.userExists = true});
   }
 
 
