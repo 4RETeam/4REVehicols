@@ -1,21 +1,20 @@
 <form (submit)='call()' class="form-wrapper">
     <div *ngIf="userExists"><vehiclos-popup-alert text='user with this email already exists!' type=WARNING></vehiclos-popup-alert></div>
     <div *ngIf="successfulReg"><vehiclos-popup-alert text='Successful Registration, Check Your Email!' type=GOOD></vehiclos-popup-alert></div>
+    <div *ngIf="emptyFields"><vehiclos-popup-alert text='PLEASe fill all fields to continue!' type=WARNING></vehiclos-popup-alert></div>
+    <div *ngIf="passwordTooWeak"><vehiclos-popup-alert text='Password is too weak!' type=WARNING></vehiclos-popup-alert></div>
+    <div *ngIf="emailIncorrect"><vehiclos-popup-alert text='Incorrect Email Format!' type=WARNING></vehiclos-popup-alert></div>
+    <div *ngIf="passwordsAreDifferent"><vehiclos-popup-alert text='Passwords Dont match!' type=WARNING></vehiclos-popup-alert></div>
 
     <div class="form-group">
         <input required email ngModel #email='ngModel' (change)="setEmail(email)" id="email" name="email" type="email" placeholder="Email">
-        <div *ngIf="email.touched && !email.valid"> <span *ngIf="email.errors.email"><vehiclos-popup-alert text='Incorrect Email Format!' type=WARNING></vehiclos-popup-alert></span></div>
     </div>
     <div class="form-group">
         <input required min="3" ngModel #name='ngModel' (change)="setName(name)" id="name" name="name" type="text" placeholder="Name">
     </div>
     <div class="form-group">
-
         <input required min="3" ngModel #pass='ngModel' (change)="setPass(pass)" id="pass" name="pass" type="password" placeholder="Password">
-        <div *ngIf="passwordTooWeak"><vehiclos-popup-alert text='Password is too weak!' type=WARNING></vehiclos-popup-alert></div>
         <input required min="3" ngModel #passConf='ngModel' (change)="setPassConf(passConf)" id="passConf" name="passConf" type="password" placeholder="Confirm Password">
-        <div *ngIf="passwordsAreDifferent"><vehiclos-popup-alert text='Passwords Dont match!' type=WARNING></vehiclos-popup-alert></div>
-        
     </div>
     <div class="form-group additional">
         <span>Already have an account? <a href="#">log in</a></span>
