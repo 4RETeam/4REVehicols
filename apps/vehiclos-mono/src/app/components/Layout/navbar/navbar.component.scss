@@ -17,7 +17,7 @@
         }
         position: relative;
         height: 101px;
-        padding: $standard-space 0;
+        padding: 0;
         background-color: $non-white;
         display: flex;
         flex-direction: row;
@@ -287,6 +287,7 @@
                 }
                 .lang-menu {
                     .dropdown {
+                        display: none;
                         position: absolute;
                         font-family: 'Roboto-Regular', sans-serif;
                         top: 52px;
