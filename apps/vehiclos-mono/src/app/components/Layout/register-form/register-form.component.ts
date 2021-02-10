@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, NgModel, ValidatorFn, Validators} from "@angular/forms";
 import { UserService } from '../../../_services/HelloService';
-import { map } from 'rxjs/operators';
+import { map, take } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -26,7 +26,10 @@ export class RegisterFormComponent implements OnInit {
   passwordTooWeak = false;
 
   userExists = false;
+
   successfulReg = false;
+
+  emptyFields = false;
 
   regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
 
@@ -40,7 +43,17 @@ export class RegisterFormComponent implements OnInit {
   setEmail(email:NgModel) {
     console.log(email);
     this.email = email.value;
-    this.emailIncorrect = !!!email.errors.email;
+    this.emailIncorrect = !email.valid;
+    
+    this.userExists = false;
+
+
+    if(!this.emailIncorrect){
+      
+      this.userService.checkEmail(email.value).pipe().subscribe(data => {this.userExists = data});
+    }else {
+      this.userExists = false;
+    }
   }
 
   setPass(pass: NgModel) {
@@ -62,8 +75,23 @@ export class RegisterFormComponent implements OnInit {
   call(){
 
     console.log("asdfa",this.email,this.pass,this.name);
-    this.userService.register(this.email,this.pass,this.name).subscribe(data => {this.successfulReg = true;},err => {this.userExists = true});
+    if(this.validate()){
+      this.userService.register(this.email,this.pass,this.name).pipe().subscribe(data => {this.successfulReg = true;});
+    }
   }
 
+  validate():boolean {
+    if(this.email === '' || this.pass === '' || this.name === ''|| this.passConf=== '') {
+      this.emptyFields = true;
+      return false
+    }else {
+      this.emptyFields = false;
+      if(this.emailIncorrect || this.userExists || this.passwordTooWeak || this.passwordsAreDifferent) {
+        return false
+      }else {
+        return true;
+      }
+    }
+  }
 
 }

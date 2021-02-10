@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { from, Observable } from 'rxjs';
+import { from, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators'
 
 @Injectable()
@@ -14,6 +14,10 @@ export class UserService{
         }catch {
             return from([{error:true}])
         }
+    }
+
+    checkEmail(email): Observable<any>{
+        return this.http.post('https://vehiclos-back.herokuapp.com/v1/user/exists',{email});
     }
 
     login(email:string, password) {
