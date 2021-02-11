@@ -36,8 +36,15 @@ export class RegisterFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  log(x: NgModel) {
-    console.log(x);
+  setClass(array:boolean[]) {
+    // console.log(array);
+    if(array.some(e => {e})) {
+      // field.
+      return 'wrong-input'
+    }
+    else {
+      return ''
+    }
   }
 
   setEmail(email:NgModel) {
@@ -49,8 +56,7 @@ export class RegisterFormComponent implements OnInit {
 
 
     if(!this.emailIncorrect){
-      
-      this.userService.checkEmail(email.value).pipe().subscribe(data => {this.userExists = data});
+      this.userService.checkEmail(email.value).pipe().subscribe(data => {this.userExists = !data});
     }else {
       this.userExists = false;
     }

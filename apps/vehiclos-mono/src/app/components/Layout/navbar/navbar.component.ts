@@ -61,7 +61,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.navButtons = [new Button('SEARCH', false, ''),new Button('SELL', false, 'sell'), new Button('ABOUT US', false, 'about-us'), new Button('WISHLIST', false, 'wishlist')];
+    this.navButtons = [new Button('SEARCH', false, '', this.lazyLoading()),new Button('SELL', false, 'sell',this.lazyLoading()), new Button('ABOUT US', false, 'about-us', this.lazyLoading()), new Button('WISHLIST', false, 'wishlist',this.lazyLoading())];
     if (!this.location.path()) {
       this.navButtons[0].isActive = true;
     } else {
@@ -73,6 +73,9 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  lazyLoading = () =>{
+
+  }
 
   changePage(button: Button) {
     for (const item of this._navButtons) {
@@ -102,6 +105,7 @@ class Button {
   private _text: string;
   private _isActive: boolean;
   private _link: string;
+  public lazyLoading: void;
 
   get text(): string {
     return this._text;
@@ -119,8 +123,8 @@ class Button {
     this._isActive = value;
   }
 
-  constructor(text: string, isActive: boolean, link: string) {
-
+  constructor(text: string, isActive: boolean, link: string, lazyLoading: void) {
+    this.lazyLoading = lazyLoading;
     this._text = text;
     this._isActive = isActive;
     this._link = link;
